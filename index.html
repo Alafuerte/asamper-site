@@ -1,267 +1,646 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Archetype Insight Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-light: #f8fafc;
+      --text: #0f172a;
+      --text-light: #f8fafc;
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+      --muted: #94a3b8;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
 
-<!-- saved from url=(0020)https://asamper.com/ -->
-<html lang="en-GB"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style>body {transition: opacity ease-in 0.2s; } 
-body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
-</style><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Asamper</title><meta content="We provide consultancy services for organisations that want to integrate disability inclusion and accessiblity within their operations, products and services. " name="description"/><meta content="Asamper" name="author"/><meta content="Starfield Technologies; Go Daddy Website Builder 8.0.0000" name="generator"/><link href="https://asamper.com/manifest.webmanifest" rel="manifest"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:57,h:57,m" rel="apple-touch-icon" sizes="57x57"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:60,h:60,m" rel="apple-touch-icon" sizes="60x60"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:72,h:72,m" rel="apple-touch-icon" sizes="72x72"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:114,h:114,m" rel="apple-touch-icon" sizes="114x114"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:120,h:120,m" rel="apple-touch-icon" sizes="120x120"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:144,h:144,m" rel="apple-touch-icon" sizes="144x144"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:152,h:152,m" rel="apple-touch-icon" sizes="152x152"/><link href="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:180,h:180,m" rel="apple-touch-icon" sizes="180x180"/><meta content="https://asamper.com/" property="og:url"/>
-<meta content="Asamper" property="og:site_name"/>
-<meta content="Asamper" property="og:title"/>
-<meta content="
-CONSULTING - TRAINING - COACHING 
-" property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png" property="og:image"/>
-<meta content="en_GB" property="og:locale"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="Asamper" name="twitter:title"/>
-<meta content="A S A M P E R" name="twitter:description"/>
-<meta content="https://img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png" name="twitter:image"/>
-<meta content="Asamper" name="twitter:image:alt"/>
-<meta content="#2c47e0" name="theme-color"/>
-<meta content="ckt0QZxNpgtBv0cbinXsJQKxtdlBDMm-BQkBBFRUhz8" name="google-site-verification"/><style>.x{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);margin:0;box-sizing:border-box}.x *,.x :after,.x :before{box-sizing:inherit}.x-el a[href^="mailto:"]:not(.x-el),.x-el a[href^="tel:"]:not(.x-el){color:inherit;font-size:inherit;text-decoration:inherit}.x-el-article,.x-el-aside,.x-el-details,.x-el-figcaption,.x-el-figure,.x-el-footer,.x-el-header,.x-el-hgroup,.x-el-main,.x-el-menu,.x-el-nav,.x-el-section,.x-el-summary{display:block}.x-el-audio,.x-el-canvas,.x-el-progress,.x-el-video{display:inline-block;vertical-align:baseline}.x-el-audio:not([controls]){display:none;height:0}.x-el-template{display:none}.x-el-a{background-color:transparent;color:inherit}.x-el-a:active,.x-el-a:hover{outline:0}.x-el-abbr[title]{border-bottom:1px dotted}.x-el-b,.x-el-strong{font-weight:700}.x-el-dfn{font-style:italic}.x-el-mark{background:#ff0;color:#000}.x-el-small{font-size:80%}.x-el-sub,.x-el-sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}.x-el-sup{top:-.5em}.x-el-sub{bottom:-.25em}.x-el-img{vertical-align:middle;border:0}.x-el-svg:not(:root){overflow:hidden}.x-el-figure{margin:0}.x-el-hr{box-sizing:content-box;height:0}.x-el-pre{overflow:auto}.x-el-code,.x-el-kbd,.x-el-pre,.x-el-samp{font-family:monospace,monospace;font-size:1em}.x-el-button,.x-el-input,.x-el-optgroup,.x-el-select,.x-el-textarea{color:inherit;font:inherit;margin:0}.x-el-button{overflow:visible}.x-el-button,.x-el-select{text-transform:none}.x-el-button,.x-el-input[type=button],.x-el-input[type=reset],.x-el-input[type=submit]{-webkit-appearance:button;cursor:pointer}.x-el-button[disabled],.x-el-input[disabled]{cursor:default}.x-el-button::-moz-focus-inner,.x-el-input::-moz-focus-inner{border:0;padding:0}.x-el-input{line-height:normal}.x-el-input[type=checkbox],.x-el-input[type=radio]{box-sizing:border-box;padding:0}.x-el-input[type=number]::-webkit-inner-spin-button,.x-el-input[type=number]::-webkit-outer-spin-button{height:auto}.x-el-input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}.x-el-input[type=search]::-webkit-search-cancel-button,.x-el-input[type=search]::-webkit-search-decoration{-webkit-appearance:none}.x-el-textarea{border:0}.x-el-fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}.x-el-legend{border:0;padding:0}.x-el-textarea{overflow:auto}.x-el-optgroup{font-weight:700}.x-el-table{border-collapse:collapse;border-spacing:0}.x-el-td,.x-el-th{padding:0}.x{-webkit-font-smoothing:antialiased}.x-el-hr{border:0}.x-el-fieldset,.x-el-input,.x-el-select,.x-el-textarea{margin-top:0;margin-bottom:0}.x-el-fieldset,.x-el-input[type=email],.x-el-input[type=text],.x-el-textarea{width:100%}.x-el-label{vertical-align:middle}.x-el-input{border-style:none;padding:.5em;vertical-align:middle}.x-el-select:not([multiple]){vertical-align:middle}.x-el-textarea{line-height:1.75;padding:.5em}.x-el.d-none{display:none!important}.sideline-footer{margin-top:auto}.disable-scroll{touch-action:none;overflow:hidden;position:fixed;max-width:100vw}@-webkit-keyframes loaderscale{0%{transform:scale(1);opacity:1}45%{transform:scale(.1);opacity:.7}80%{transform:scale(1);opacity:1}}@keyframes loaderscale{0%{transform:scale(1);opacity:1}45%{transform:scale(.1);opacity:.7}80%{transform:scale(1);opacity:1}}.x-loader svg{display:inline-block}.x-loader svg:first-child{-webkit-animation:loaderscale .75s cubic-bezier(.2,.68,.18,1.08) -.24s infinite;animation:loaderscale .75s cubic-bezier(.2,.68,.18,1.08) -.24s infinite}.x-loader svg:nth-child(2){-webkit-animation:loaderscale .75s cubic-bezier(.2,.68,.18,1.08) -.12s infinite;animation:loaderscale .75s cubic-bezier(.2,.68,.18,1.08) -.12s infinite}.x-loader svg:nth-child(3){-webkit-animation:loaderscale .75s cubic-bezier(.2,.68,.18,1.08) 0s infinite;animation:loaderscale .75s cubic-bezier(.2,.68,.18,1.08) 0s infinite}.x-icon>svg{transition:transform .33s ease-in-out}.x-icon>svg.rotate-90{transform:rotate(-90deg)}.x-icon>svg.rotate90{transform:rotate(90deg)}.x-icon>svg.rotate-180{transform:rotate(-180deg)}.x-icon>svg.rotate180{transform:rotate(180deg)}.x-rt ol,.x-rt ul{text-align:left}.x-rt p{margin:0}.mte-inline-block{display:inline-block}@media only screen and (min-device-width:1025px){:root select,_::-webkit-full-page-media,_:future{font-family:sans-serif!important}}
-
-</style>
-<style>/*
-This license can also be found at this permalink: https://www.fontsquirrel.com/license/league-spartan
-
-Copyright (c) September 22 2014, Micah Rich micah@micahrich.com, with Reserved Font Name: "League Spartan".
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
-
-—————————————————————————————-
-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
-—————————————————————————————-
-*/
-@import url('//img1.wsimg.com/blobby/go/font/LeagueSpartan/league-spartan.css');
-@import url('');</style>
-<style data-glamor="cxs-default-sheet">.x .c1-1{letter-spacing:normal}.x .c1-2{text-transform:none}.x .c1-3{background-color:rgb(255, 255, 255)}.x .c1-4{width:100%}.x .c1-5 > div{position:relative}.x .c1-6 > div{overflow:hidden}.x .c1-7 > div{margin-top:auto}.x .c1-8 > div{margin-right:auto}.x .c1-9 > div{margin-bottom:auto}.x .c1-a > div{margin-left:auto}.x .c1-b{font-family:Helvetica, arial, sans-serif}.x .c1-c{font-size:16px}.x .c1-h{padding-top:56px}.x .c1-i{padding-bottom:56px}.x .c1-j{overflow:hidden}.x .c1-k{padding:0px !important}.x .c1-n{display:flex}.x .c1-o{flex-direction:column}.x .c1-p{min-height:500px}.x .c1-q{justify-content:flex-start}.x .c1-s{position:static}.x .c1-u{z-index:3}.x .c1-v .sticky-animate{background-color:rgba(255, 255, 255, 0.9)}.x .c1-w .sticky-animate hr{opacity:0 !important}.x .c1-x{transition:background .3s}.x .c1-y{position:relative}.x .c1-z{padding-top:8px}.x .c1-10{padding-bottom:8px}.x .c1-11{padding-left:24px}.x .c1-12{padding-right:24px}.x .c1-13{background-color:transparent}.x .c1-18{align-items:center}.x .c1-19{flex-wrap:nowrap}.x .c1-1a{margin-top:0px}.x .c1-1b{margin-right:0px}.x .c1-1c{margin-bottom:0px}.x .c1-1d{margin-left:0px}.x .c1-1e{[object -object]:0px}.x .c1-1g{width:70%}.x .c1-1h{text-align:left}.x .c1-1i{overflow-wrap:break-word}.x .c1-1j{padding-left:8px}.x .c1-1k{padding-right:8px}.x .c1-1l{display:inline-block}.x .c1-1m{font-family:'League Spartan', arial, helvetica, sans-serif}.x .c1-1q{letter-spacing:inherit}.x .c1-1r{text-transform:inherit}.x .c1-1s{text-decoration:none}.x .c1-1t{word-wrap:break-word}.x .c1-1u{display:inline}.x .c1-1v{cursor:pointer}.x .c1-1w{border-top:0px}.x .c1-1x{border-right:0px}.x .c1-1y{border-bottom:0px}.x .c1-1z{border-left:0px}.x .c1-20{max-width:100%}.x .c1-21{width:auto}.x .c1-22{color:rgb(44, 71, 224)}.x .c1-23{font-weight:inherit}.x .c1-24:hover{color:rgb(33, 55, 178)}.x .c1-25:active{color:rgb(20, 37, 127)}.x .c1-26{height:1em}.x .c1-27{padding-top:0px}.x .c1-28{padding-right:0px}.x .c1-29{padding-bottom:0px}.x .c1-2a{padding-left:0px}.x .c1-2c{margin-left:auto}.x .c1-2d{margin-right:auto}.x .c1-2e{vertical-align:middle}.x .c1-2f{aspect-ratio:1 / 1}.x .c1-2g{object-fit:contain}.x .c1-2h{height:80px}.x .c1-2i{transition:max-height .5s}.x .c1-2j{border-radius:0px}.x .c1-31{width:30%}.x .c1-32{justify-content:flex-end}.x .c1-33{color:rgb(27, 27, 27)}.x .c1-34:hover{color:rgb(44, 71, 224)}.x .c1-35{color:inherit}.x .c1-36{vertical-align:top}.x .c1-37{padding-top:6px}.x .c1-38{padding-right:6px}.x .c1-39{padding-bottom:6px}.x .c1-3a{padding-left:6px}.x .c1-3b{display:none}.x .c1-3d{width:35%}.x .c1-3e{min-width:35%}.x .c1-3f{flex-shrink:0}.x .c1-3k{min-width:65%}.x .c1-3l{flex-basis:auto}.x .c1-3m{padding-top:5px}.x .c1-3n{line-height:24px}.x .c1-3o{-webkit-margin-before:0}.x .c1-3p{-webkit-margin-after:0}.x .c1-3q{-webkit-padding-start:0}.x .c1-3r{color:rgb(94, 94, 94)}.x .c1-3s{margin-bottom:none}.x .c1-3t{list-style:none}.x .c1-3u{padding-left:32px}.x .c1-3v{white-space:nowrap}.x .c1-3w{visibility:hidden}.x .c1-3x:first-child{margin-left:0}.x .c1-3y:first-child{padding-left:0}.x .c1-3z{letter-spacing:0.071em}.x .c1-40{text-transform:uppercase}.x .c1-41{display:block}.x .c1-42{font-size:14px}.x .c1-43{font-weight:700}.x .c1-44:hover{color:rgb(27, 27, 27)}.x .c1-45:active{color:rgb(27, 27, 27)}.x .c1-4a{margin-left:-6px}.x .c1-4b{margin-right:-6px}.x .c1-4c{margin-top:-6px}.x .c1-4d{margin-bottom:-6px}.x .c1-4e{font-weight:400}.x .c1-4f{transition:transform .33s ease-in-out}.x .c1-4g{transform:rotate(0deg)}.x .c1-4h{border-radius:4px}.x .c1-4i{box-shadow:0 3px 6px 3px rgba(0,0,0,0.24)}.x .c1-4j{padding-top:16px}.x .c1-4k{padding-bottom:16px}.x .c1-4l{padding-left:16px}.x .c1-4m{padding-right:16px}.x .c1-4n{position:absolute}.x .c1-4o{right:0px}.x .c1-4p{top:32px}.x .c1-4q{max-height:45vh}.x .c1-4r{overflow-y:auto}.x .c1-4s{z-index:1003}.x .c1-4v:last-child{margin-bottom:0}.x .c1-4w{margin-top:8px}.x .c1-4x{margin-bottom:8px}.x .c1-4y{line-height:1.5}.x .c1-4z{background-color:rgb(22, 22, 22)}.x .c1-50{position:fixed}.x .c1-51{top:0px}.x .c1-52{height:100%}.x .c1-53{z-index:10002}.x .c1-54{-webkit-overflow-scrolling:touch}.x .c1-55{transform:translateX(-249vw)}.x .c1-56{overscroll-behavior:contain}.x .c1-57{box-shadow:0 2px 6px 0px rgba(0,0,0,0.2)}.x .c1-58{transition:transform .3s ease-in-out}.x .c1-59{color:rgb(247, 247, 247)}.x .c1-5a{line-height:1.3em}.x .c1-5b{font-style:normal}.x .c1-5c{top:15px}.x .c1-5d{right:15px}.x .c1-5e{font-size:28px}.x .c1-5f:hover{color:rgb(89, 114, 255)}.x .c1-5k{overflow-x:hidden}.x .c1-5l{overscroll-behavior:none}.x .c1-5q{color:rgb(164, 164, 164)}.x .c1-5r{border-color:rgba(76, 76, 76, 0.5)}.x .c1-5s{border-bottom-width:1px}.x .c1-5t{border-bottom-style:solid}.x .c1-5u:last-child{border-bottom:0}.x .c1-5v{min-width:200px}.x .c1-5w{justify-content:space-between}.x .c1-5x{font-size:22px}.x .c1-5y:hover{color:rgb(182, 186, 247)}.x .c1-5z:active{color:rgb(89, 114, 255)}.x .c1-65{flex-grow:1}.x .c1-66{justify-content:center}.x .c1-6e{padding-top:24px}.x .c1-6f{padding-bottom:24px}.x .c1-6g{text-align:center}.x .c1-6p{line-height:1.2}.x .c1-6q{line-height:1.25}.x .c1-6r{white-space:pre-line}.x .c1-6s{font-size:40px}.x .c1-6x{word-wrap:normal !important}.x .c1-6y{overflow-wrap:normal !important}.x .c1-6z{overflow:visible}.x .c1-70{left:0px}.x .c1-71{font-size:32px}.x .c1-76 > p{margin-top:0}.x .c1-77 > p{margin-right:0}.x .c1-78 > p{margin-bottom:0}.x .c1-79 > p{margin-left:0}.x .c1-7a{font-size:inherit !important}.x .c1-7b{line-height:inherit}.x .c1-7c{font-style:italic}.x .c1-7d{text-decoration:line-through}.x .c1-7e{text-decoration:underline}.x .c1-7f{margin-top:24px}.x .c1-7g{margin-bottom:24px}.x .c1-7h{flex-wrap:wrap}.x .c1-7i{column-gap:24px}.x .c1-7j{row-gap:24px}.x .c1-7m{border-style:none}.x .c1-7n{display:inline-flex}.x .c1-7o{padding-right:32px}.x .c1-7p{min-height:56px}.x .c1-7q{border-radius:4px}.x .c1-7r{color:rgb(255, 255, 255)}.x .c1-7s{background-color:rgb(44, 71, 224)}.x .c1-7t{text-shadow:none}.x .c1-7u:hover{background-color:rgb(85, 101, 236)}.x .c1-7w{box-sizing:border-box}.x .c1-7x{flex-direction:row}.x .c1-7y{margin-right:-12px}.x .c1-7z{margin-left:-12px}.x .c1-84{flex-shrink:1}.x .c1-85{flex-basis:0%}.x .c1-86{padding-right:12px}.x .c1-87{padding-left:12px}.x .c1-8i > *{max-width:100%}.x .c1-8j > :nth-child(n){margin-bottom:24px}.x .c1-8k  > :last-child{margin-bottom:0 !important}.x .c1-8n > p > ol{text-align:left}.x .c1-8o > p > ol{display:block}.x .c1-8p > p > ol{padding-left:1.3em}.x .c1-8q > p > ol{margin-left:16px}.x .c1-8r > p > ol{margin-right:16px}.x .c1-8s > p > ol{margin-top:auto}.x .c1-8t > p > ol{margin-bottom:auto}.x .c1-8u > p > ul{text-align:left}.x .c1-8v > p > ul{display:block}.x .c1-8w > p > ul{padding-left:1.3em}.x .c1-8x > p > ul{margin-left:16px}.x .c1-8y > p > ul{margin-right:16px}.x .c1-8z > p > ul{margin-top:auto}.x .c1-90 > p > ul{margin-bottom:auto}.x .c1-91 > ul{text-align:left}.x .c1-92 > ul{display:block}.x .c1-93 > ul{padding-left:1.3em}.x .c1-94 > ul{margin-left:16px}.x .c1-95 > ul{margin-right:16px}.x .c1-96 > ul{margin-top:auto}.x .c1-97 > ul{margin-bottom:auto}.x .c1-98 > ol{text-align:left}.x .c1-99 > ol{display:block}.x .c1-9a > ol{padding-left:1.3em}.x .c1-9b > ol{margin-left:16px}.x .c1-9c > ol{margin-right:16px}.x .c1-9d > ol{margin-top:auto}.x .c1-9e > ol{margin-bottom:auto}.x .c1-9f{font-size:18px}.x .c1-9k{background-color:rgb(246, 246, 246)}.x .c1-9l{line-height:1.4}.x .c1-9m{margin-bottom:40px}.x .c1-9n{font-size:unset}.x .c1-9o{font-family:unset}.x .c1-9p{letter-spacing:unset}.x .c1-9q{text-transform:unset}.x .c1-9r{line-height:0px}.x .c1-9s{border-color:rgb(218, 218, 218)}.x .c1-9t{border-bottom-width:2px}.x .c1-9u{border-style:solid}.x .c1-9v{width:50px}.x .c1-9w{margin-bottom:-24px}.x .c1-9y{flex-basis:100%}.x .c1-9z{padding-bottom:48px}.x .c1-a4{color:rgb(87, 87, 87)}.x .c1-a5{font-size:20px}.x .c1-ad{aspect-ratio:1.7655172413793103 / 1}.x .c1-ae{max-height:100%}.x .c1-ai{aspect-ratio:1.910828025477707 / 1}.x .c1-ak{aspect-ratio:2.955665024630542 / 1}.x .c1-am{aspect-ratio:2.727272727272727 / 1}.x .c1-ao{aspect-ratio:0.6132404181184669 / 1}.x .c1-aq{aspect-ratio:0.9036144578313253 / 1}.x .c1-as{aspect-ratio:2.424317617866005 / 1}.x .c1-au{aspect-ratio:1.040084388185654 / 1}.x .c1-ay{width:48px}.x .c1-az{height:48px}.x .c1-b0{top:30px}.x .c1-b3{right:0px}.x .c1-b4{color:rgb(21, 21, 21)}.x .c1-b5{color:rgb(169, 169, 169)}.x .c1-b6{border-color:rgb(42, 42, 42)}.x .c1-b7{border-bottom-width:1px}.x .c1-b8{color:rgb(89, 114, 255)}.x .c1-b9:active{color:rgb(214, 216, 251)}.x .c1-ba{z-index:10000}.x .c1-bb{height:auto}.x .c1-bc{transition:all 1s ease-in}.x .c1-bd{box-shadow:0 2px 6px 0px rgba(0,0,0,0.3)}.x .c1-be{contain:content}.x .c1-bf{bottom:-500px}.x .c1-bn{max-height:300px}.x .c1-bo{color:rgb(251, 251, 251)}.x .c1-bq{margin-bottom:4px}.x .c1-br{word-break:break-word}.x .c1-bs{flex-basis:50%}.x .c1-bt{padding-top:4px}.x .c1-bu{padding-bottom:4px}.x .c1-bv{min-height:40px}.x .c1-bw{color:rgb(48, 48, 48)}.x .c1-bx{font-size:12px}.x .c1-by:nth-child(2){margin-left:24px}.x .c1-bz:hover{background-color:rgb(255, 255, 255)}</style>
-<style data-glamor="cxs-xs-sheet">@media (max-width: 767px){.x .c1-l{padding-top:40px}}@media (max-width: 767px){.x .c1-m{padding-bottom:40px}}@media (max-width: 767px){.x .c1-1n{justify-content:flex-start}}@media (max-width: 767px){.x .c1-1o{max-width:100%}}@media (max-width: 767px){.x .c1-2k{height:auto}}@media (max-width: 767px){.x .c1-2l{max-width:224px}}@media (max-width: 767px){.x .c1-2m{display:block}}@media (max-width: 767px){.x .c1-2n{max-height:110px}}@media (max-width: 767px){.x .c1-2o{margin-top:0}}@media (max-width: 767px){.x .c1-2p{margin-right:auto}}@media (max-width: 767px){.x .c1-2q{margin-bottom:0}}@media (max-width: 767px){.x .c1-2r{margin-left:auto}}@media (max-width: 767px){.x .c1-3g{width:100%}}@media (max-width: 767px){.x .c1-3h{display:flex}}@media (max-width: 767px){.x .c1-3i{justify-content:center}}@media (max-width: 767px){.x .c1-7k{flex-direction:column}}@media (max-width: 767px){.x .c1-8l > :nth-child(n){margin-bottom:24px}}@media (max-width: 767px){.x .c1-8m  > :last-child{margin-bottom:0 !important}}@media (max-width: 767px){.x .c1-a3 > :nth-child(n){margin-bottom:16px}}@media (max-width: 767px){.x .c1-aa{height:80px}}@media (max-width: 767px){.x .c1-ab{padding-left:16px}}@media (max-width: 767px){.x .c1-ac{padding-right:16px}}@media (max-width: 767px){.x .c1-af{height:calc((100vw - 48px)/1.7655172413793103)}}@media (max-width: 767px){.x .c1-ag{max-height:80px}}@media (max-width: 767px){.x .c1-aj{height:calc((100vw - 48px)/1.910828025477707)}}@media (max-width: 767px){.x .c1-al{height:calc((100vw - 48px)/2.955665024630542)}}@media (max-width: 767px){.x .c1-an{height:calc((100vw - 48px)/2.727272727272727)}}@media (max-width: 767px){.x .c1-ap{height:calc((100vw - 48px)/0.6132404181184669)}}@media (max-width: 767px){.x .c1-ar{height:calc((100vw - 48px)/0.9036144578313253)}}@media (max-width: 767px){.x .c1-at{height:calc((100vw - 48px)/2.424317617866005)}}@media (max-width: 767px){.x .c1-av{height:calc((100vw - 48px)/1.040084388185654)}}@media (max-width: 767px){.x .c1-aw .carousel-viewport{max-width:80%}}@media (max-width: 767px){.x .c1-b1{width:32px}}@media (max-width: 767px){.x .c1-b2{height:32px}}</style>
-<style data-glamor="cxs-sm-sheet">@media (min-width: 768px){.x .c1-d{font-size:16px}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-1p{width:auto}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-2s{display:block}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-2t{max-height:88px}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-2u{margin-top:0}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-2v{margin-right:auto}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-2w{margin-bottom:0}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-2x{margin-left:auto}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-3j{width:100%}}@media (min-width: 768px){.x .c1-46{font-size:14px}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-4u{right:0px}}@media (min-width: 768px){.x .c1-5g{font-size:30px}}@media (min-width: 768px){.x .c1-5m{width:100%}}@media (min-width: 768px){.x .c1-60{font-size:22px}}@media (min-width: 768px){.x .c1-6t{font-size:48px}}@media (min-width: 768px){.x .c1-72{font-size:38px}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-7l{justify-content:center}}@media (min-width: 768px){.x .c1-7v{width:auto}}@media (min-width: 768px){.x .c1-80{margin-top:0}}@media (min-width: 768px){.x .c1-81{margin-right:-24px}}@media (min-width: 768px){.x .c1-82{margin-bottom:0}}@media (min-width: 768px){.x .c1-83{margin-left:-24px}}@media (min-width: 768px){.x .c1-88{margin-left:8.333333333333332%}}@media (min-width: 768px){.x .c1-89{flex-basis:83.33333333333334%}}@media (min-width: 768px){.x .c1-8a{max-width:83.33333333333334%}}@media (min-width: 768px){.x .c1-8b{padding-top:0}}@media (min-width: 768px){.x .c1-8c{padding-right:24px}}@media (min-width: 768px){.x .c1-8d{padding-bottom:0}}@media (min-width: 768px){.x .c1-8e{padding-left:24px}}@media (min-width: 768px){.x .c1-9g{font-size:18px}}@media (min-width: 768px){.x .c1-9x{margin-bottom:-48px}}@media (min-width: 768px){.x .c1-a0{padding-bottom:48px}}@media (min-width: 768px){.x .c1-a6{font-size:20px}}@media (min-width: 768px) and (max-width: 1023px){.x .c1-ah{max-height:80px}}@media (min-width: 768px){.x .c1-bg{width:400px}}@media (min-width: 768px){.x .c1-bh{max-height:500px}}@media (min-width: 768px){.x .c1-bi{border-radius:7px}}@media (min-width: 768px){.x .c1-bj{margin-top:24px}}@media (min-width: 768px){.x .c1-bk{margin-right:24px}}@media (min-width: 768px){.x .c1-bl{margin-bottom:24px}}@media (min-width: 768px){.x .c1-bm{margin-left:24px}}@media (min-width: 768px){.x .c1-bp{max-height:200px}}@media (min-width: 768px){.x .c1-c0{font-size:12px}}</style>
-<style data-glamor="cxs-md-sheet">@media (min-width: 1024px){.x .c1-e{font-size:16px}}@media (min-width: 1024px){.x .c1-r{min-height:85vh}}@media (min-width: 1024px){.x .c1-t{position:static}}@media (min-width: 1024px){.x .c1-14{padding-top:16px}}@media (min-width: 1024px){.x .c1-15{padding-bottom:16px}}@media (min-width: 1024px){.x .c1-16{padding-left:24px}}@media (min-width: 1024px){.x .c1-17{padding-right:24px}}@media (min-width: 1024px){.x .c1-1f{display:none}}@media (min-width: 1024px){.x .c1-2b{margin-top:-8px}}@media (min-width: 1024px){.x .c1-2y{height:200px}}@media (min-width: 1024px){.x .c1-2z{width:auto}}@media (min-width: 1024px){.x .c1-30{max-height:200px}}@media (min-width: 1024px){.x .c1-3c{display:flex}}@media (min-width: 1024px){.x .c1-47{font-size:14px}}@media (min-width: 1024px) and (max-width: 1279px){.x .c1-4t{right:0px}}@media (min-width: 1024px){.x .c1-5h{font-size:30px}}@media (min-width: 1024px){.x .c1-5n{width:984px}}@media (min-width: 1024px){.x .c1-61{min-width:300px}}@media (min-width: 1024px){.x .c1-62{font-size:22px}}@media (min-width: 1024px){.x .c1-67{margin-top:0px}}@media (min-width: 1024px){.x .c1-68{margin-bottom:0px}}@media (min-width: 1024px){.x .c1-69{padding-top:140px}}@media (min-width: 1024px){.x .c1-6a{justify-content:center}}@media (min-width: 1024px){.x .c1-6b{margin-left:auto}}@media (min-width: 1024px){.x .c1-6c{margin-right:auto}}@media (min-width: 1024px){.x .c1-6d{max-width:66%}}@media (min-width: 1024px){.x .c1-6h{flex-grow:1}}@media (min-width: 1024px){.x .c1-6i{flex-shrink:0}}@media (min-width: 1024px){.x .c1-6j{flex-basis:auto}}@media (min-width: 1024px){.x .c1-6k{padding-top:56px}}@media (min-width: 1024px){.x .c1-6l{padding-bottom:56px}}@media (min-width: 1024px){.x .c1-6m{text-align:center}}@media (min-width: 1024px){.x .c1-6n{max-width:100%}}@media (min-width: 1024px){.x .c1-6o{align-items:center}}@media (min-width: 1024px){.x .c1-6u{font-size:48px}}@media (min-width: 1024px){.x .c1-73{font-size:38px}}@media (min-width: 1024px){.x .c1-8f{margin-left:16.666666666666664%}}@media (min-width: 1024px){.x .c1-8g{flex-basis:66.66666666666666%}}@media (min-width: 1024px){.x .c1-8h{max-width:66.66666666666666%}}@media (min-width: 1024px){.x .c1-9h{font-size:18px}}@media (min-width: 1024px){.x .c1-a1{flex-basis:50%}}@media (min-width: 1024px){.x .c1-a2{max-width:50%}}@media (min-width: 1024px){.x .c1-a7{font-size:20px}}@media (min-width: 1024px){.x .c1-ax .carousel-viewport{max-width:90%}}@media (min-width: 1024px){.x .c1-c1{font-size:12px}}</style>
-<style data-glamor="cxs-lg-sheet">@media (min-width: 1280px){.x .c1-f{font-size:16px}}@media (min-width: 1280px){.x .c1-48{font-size:14px}}@media (min-width: 1280px){.x .c1-5i{font-size:32px}}@media (min-width: 1280px){.x .c1-5o{width:1160px}}@media (min-width: 1280px){.x .c1-63{font-size:22px}}@media (min-width: 1280px){.x .c1-6v{font-size:62px}}@media (min-width: 1280px){.x .c1-74{font-size:44px}}@media (min-width: 1280px){.x .c1-9i{font-size:18px}}@media (min-width: 1280px){.x .c1-a8{font-size:20px}}@media (min-width: 1280px){.x .c1-c2{font-size:12px}}</style>
-<style data-glamor="cxs-xl-sheet">@media (min-width: 1536px){.x .c1-g{font-size:18px}}@media (min-width: 1536px){.x .c1-49{font-size:16px}}@media (min-width: 1536px){.x .c1-5j{font-size:36px}}@media (min-width: 1536px){.x .c1-5p{width:1280px}}@media (min-width: 1536px){.x .c1-64{font-size:24px}}@media (min-width: 1536px){.x .c1-6w{font-size:64px}}@media (min-width: 1536px){.x .c1-75{font-size:48px}}@media (min-width: 1536px){.x .c1-9j{font-size:20px}}@media (min-width: 1536px){.x .c1-a9{font-size:23px}}@media (min-width: 1536px){.x .c1-c3{font-size:14px}}</style>
-<style>@keyframes opacity-bounce { 
-      0% {opacity: 0;transform: translateY(100%); } 
-      60% { transform: translateY(-20%); } 
-      100% { opacity: 1; transform: translateY(0); }
-    }</style>
-<style>.gd-ad-flex-parent {
-          animation-name: opacity-bounce; 
-          animation-duration: 800ms; 
-          animation-delay: 400ms; 
-          animation-fill-mode: forwards; 
-          animation-timing-function: ease; 
-          opacity: 0;</style>
-<style id="carousel-stylesheet">.carousel {
-  text-align: center;
-  position: relative;
-  opacity: 0;
-  margin: 0 auto;
-  transition: opacity 0.5s;
-}
-.carousel .carousel-container-inner {
-  margin: 0 auto;
-  position: relative;
-}
-.carousel .carousel-viewport {
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: left;
-}
-.carousel .carousel-arrow-default {
-  border: 3px solid !important;
-  border-radius: 50%;
-  color: rgba(255, 255, 255, 0.9);
-  height: 32px;
-  width: 32px;
-  font-weight: 900;
-  background: rgba(0, 0, 0, 0.15);
-}
-.carousel .carousel-arrow {
-  position: absolute;
-  z-index: 1;
-  bottom: 23px;
-  padding: 0;
-  cursor: pointer;
-  border: none;
-}
-.carousel .carousel-arrow:focus {
-  outline: none;
-}
-.carousel .carousel-arrow:before {
-  font-size: 19px;
-  display: block;
-  margin-top: -2px;
-}
-.carousel .carousel-arrow:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-.carousel .carousel-left-arrow {
-  left: 23px;
-}
-.carousel .carousel-right-arrow {
-  right: 23px;
-}
-.carousel .carousel-left-arrow.carousel-arrow-default:before {
-  content: '<';
-  padding-right: 2px;
-}
-.carousel .carousel-right-arrow.carousel-arrow-default:before {
-  content: '>';
-  padding-left: 2px;
-}
-.carousel .carousel-track {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  touch-action: pan-y pinch-zoom;
-}
-.carousel .carousel-track .carousel-slide {
-  display: inline-block;
-  opacity: 0.7;
-  transition: opacity 0.5s ease-in-out;
-}
-.carousel .carousel-track .carousel-slide > * {
-  display: block;
-  white-space: normal;
-}
-.carousel .carousel-track .carousel-slide.carousel-slide-loading {
-  background: rgba(204, 204, 204, 0.7);
-}
-.carousel .carousel-track .carousel-slide.carousel-slide-fade {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-}
-.carousel .carousel-track .carousel-slide.carousel-slide-selected {
-  opacity: 1;
-  z-index: 1;
-}
-.carousel.loaded {
-  opacity: 1;
-}
-.carousel .carousel-dots {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -30px;
-  text-align: center;
-}
-.carousel .carousel-dots li {
-  display: inline-block;
-}
-.carousel .carousel-dots button {
-  border: 0;
-  background: transparent;
-  font-size: 1.1em;
-  cursor: pointer;
-  color: #CCC;
-  padding-left: 6px;
-  padding-right: 6px;
-}
-.carousel .carousel-dots button.selected {
-  color: black;
-}
-.carousel .carousel-dots button:focus {
-  outline: none;
-}
-[dir="rtl"] .carousel .carousel-viewport {
-  text-align: right;
-}
-[dir="rtl"] .carousel .carousel-left-arrow {
-  left: unset;
-  right: 23px;
-}
-[dir="rtl"] .carousel .carousel-right-arrow {
-  right: unset;
-  left: 23px;
-}
-[dir="rtl"] .carousel .carousel-left-arrow.carousel-arrow-default:before {
-  padding-left: 2px;
-  padding-right: unset;
-}
-[dir="rtl"] .carousel .carousel-right-arrow.carousel-arrow-default:before {
-  padding-right: 2px;
-  padding-left: unset;
-}</style>
-<style>.page-inner { background-color: rgb(22, 22, 22); min-height: 100vh; }</style>
-<script>"use strict";
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js');
-  });
-}</script><script crossorigin="Anonymous" src="./Asamper_files/bs-layout13-Theme-publish-Theme-96064f33.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-_rollupPluginBabelHelpers-1ddb43ea.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-defaultSocialIconPack-a2c518b6.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-humanisticFilled-91edd0e1.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-imageToHeaderTreatments-e81a288a.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-index-4e26cd6b.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-index3-783535d7.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-legacyOverrides-42582241.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-loaders-fffeeba5.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-overlayTypes-4cc463a5.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-themeOverrides-e736c017.js"></script><script crossorigin="Anonymous" src="./Asamper_files/Carousel-3d82957b.js"></script><script crossorigin="Anonymous" src="./Asamper_files/ColorSwatch-4196a0a9.js"></script><script crossorigin="Anonymous" src="./Asamper_files/DynamicFontScaler-6cccd626.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-dataAids-6a839d53.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-index2-87bd33e6.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-navigationDrawer-27f5f1f5.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-searchFormLocations-c86f2a99.js"></script><script crossorigin="Anonymous" src="./Asamper_files/_commonjsHelpers-67085353.js"></script><script crossorigin="Anonymous" src="./Asamper_files/_react_commonjs-external-a1351e34.js"></script><script crossorigin="Anonymous" src="./Asamper_files/_rollupPluginBabelHelpers-8ce54c82.js"></script><script crossorigin="Anonymous" src="./Asamper_files/interopRequireDefault-c83974f7.js"></script><script crossorigin="Anonymous" src="./Asamper_files/dynamicFontScaler-ecd443bf.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-LinkAwareComponent-0e7597ad.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-FlyoutMenu-Component-bd43c5d0.js"></script><script crossorigin="Anonymous" src="./Asamper_files/bs-Toggle-37f740c7.js"></script><style>
-      @keyframes rotate360 {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: var(--bg);
+        color: var(--text-light);
       }
-    
-        @font-face {
-            font-family: 'Amazon Ember';
-            src: url("chrome-extension://cgdjpilhipecahhcilnafpblkieebhea/fonts/AmazonEmber_Rg.ttf");
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap; 
+      .card {
+        background: color-mix(in srgb, var(--surface) 85%, white 15%);
+        color: var(--text-light);
+      }
+      .input-group input,
+      .input-group select,
+      .input-group button,
+      .archetype-table,
+      .report {
+        background: color-mix(in srgb, var(--surface) 92%, white 8%);
+        color: var(--text-light);
+        border-color: rgba(148, 163, 184, 0.3);
+      }
+      .input-group button:hover {
+        background: color-mix(in srgb, var(--accent) 90%, black 10%);
+      }
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--surface-light);
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    main {
+      width: min(960px, 100%);
+      display: grid;
+      gap: 2rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      color: var(--accent);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 40px 120px rgba(15, 23, 42, 0.15);
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+
+    .input-group label {
+      display: grid;
+      gap: 0.35rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .input-group input,
+    .input-group select {
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 1rem;
+      min-width: 220px;
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+    }
+
+    .input-group button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 0.9rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .input-group button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .input-group button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .archetype-table th,
+    .archetype-table td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .archetype-table thead {
+      background: rgba(148, 163, 184, 0.12);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .archetype-table tbody tr {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+    }
+
+    .archetype-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent-dark);
+    }
+
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .generate-btn {
+      background: #22c55e;
+      color: white;
+      border: none;
+      padding: 0.9rem 1.75rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .generate-btn:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+    }
+
+    .generate-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .report {
+      background: white;
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 30px 90px rgba(15, 23, 42, 0.12);
+      display: grid;
+      gap: 1.25rem;
+      line-height: 1.75;
+    }
+
+    .report h2 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: var(--accent);
+    }
+
+    .report h3 {
+      margin: 1.25rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .report ul {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .report .source {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .loading {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 3px solid rgba(148, 163, 184, 0.45);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .empty-state {
+      display: grid;
+      place-items: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      text-align: center;
+      gap: 0.75rem;
+    }
+
+    .empty-state strong {
+      font-size: 1.1rem;
+      color: inherit;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 2rem 1rem;
+      }
+
+      .input-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .input-group label {
+        width: 100%;
+      }
+
+      .input-group input,
+      .input-group select,
+      .input-group button {
+        width: 100%;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .generate-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Animal Archetype Insight Builder</h1>
+      <p>
+        Describe the animal archetypes or spirits that resonate with you most. Assign each archetype a relevance score from
+        1 (low influence) to 5 (strong influence). When you are ready, generate a report that synthesizes traits from online
+        knowledge sources to reflect your unique blend of archetypes.
+      </p>
+    </header>
+
+    <section class="card" aria-labelledby="input-title">
+      <h2 id="input-title" style="margin:0;font-size:1.4rem;">Add your archetypes</h2>
+      <form id="archetype-form" class="input-group" autocomplete="off">
+        <label for="archetype-name">
+          Archetype or spirit
+          <input id="archetype-name" name="archetype-name" type="text" placeholder="e.g. Wolf, Phoenix, Sea Turtle" required />
+        </label>
+        <label for="archetype-score">
+          Influence (1–5)
+          <select id="archetype-score" name="archetype-score" required>
+            <option value="">Select</option>
+            <option value="1">1 – Gentle influence</option>
+            <option value="2">2 – Occasional presence</option>
+            <option value="3">3 – Consistent guide</option>
+            <option value="4">4 – Strong motivator</option>
+            <option value="5">5 – Core identity</option>
+          </select>
+        </label>
+        <button type="submit">Add archetype</button>
+      </form>
+      <p id="form-feedback" role="status" aria-live="polite" style="margin:0;color:#ef4444;min-height:1.2rem;"></p>
+    </section>
+
+    <section class="card" aria-labelledby="list-title">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+        <h2 id="list-title" style="margin:0;font-size:1.4rem;">Your selected archetypes</h2>
+        <div class="actions">
+          <button id="reset-btn" class="input-group button" type="button" style="background:#334155;color:white;">Clear all</button>
+          <button id="generate-btn" class="generate-btn" type="button" disabled>Generate report</button>
+        </div>
+      </div>
+      <div id="archetype-list" role="region" aria-live="polite" aria-busy="false"></div>
+    </section>
+
+    <section class="report" aria-live="polite" aria-busy="false" hidden>
+      <h2>Personalized archetype reflection</h2>
+      <p id="report-intro"></p>
+      <div id="report-summary"></div>
+      <div id="report-sources"></div>
+    </section>
+  </main>
+
+  <template id="table-template">
+    <table class="archetype-table">
+      <thead>
+        <tr>
+          <th scope="col">Archetype</th>
+          <th scope="col">Influence</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </template>
+
+  <template id="empty-template">
+    <div class="empty-state">
+      <strong>No archetypes added yet</strong>
+      <span>Use the form above to describe the animal guides that shape your journey.</span>
+    </div>
+  </template>
+
+  <script>
+    const form = document.getElementById('archetype-form');
+    const archetypeNameInput = document.getElementById('archetype-name');
+    const archetypeScoreSelect = document.getElementById('archetype-score');
+    const feedbackEl = document.getElementById('form-feedback');
+    const listContainer = document.getElementById('archetype-list');
+    const tableTemplate = document.getElementById('table-template');
+    const emptyTemplate = document.getElementById('empty-template');
+    const generateBtn = document.getElementById('generate-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const reportSection = document.querySelector('.report');
+    const reportIntro = document.getElementById('report-intro');
+    const reportSummary = document.getElementById('report-summary');
+    const reportSources = document.getElementById('report-sources');
+
+    const archetypes = new Map();
+
+    const influenceLabels = {
+      1: 'Gentle influence',
+      2: 'Occasional presence',
+      3: 'Consistent guide',
+      4: 'Strong motivator',
+      5: 'Core identity',
+    };
+
+    const sanitize = (value) => value.replace(/[<>]/g, '');
+
+    const renderList = () => {
+      listContainer.innerHTML = '';
+      const entries = Array.from(archetypes.values()).sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+
+      if (!entries.length) {
+        const emptyClone = emptyTemplate.content.cloneNode(true);
+        listContainer.appendChild(emptyClone);
+        generateBtn.disabled = true;
+        reportSection.hidden = true;
+        return;
+      }
+
+      const tableClone = tableTemplate.content.cloneNode(true);
+      const tbody = tableClone.querySelector('tbody');
+
+      entries.forEach(({ name, score }) => {
+        const row = document.createElement('tr');
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = name;
+        nameCell.scope = 'row';
+
+        const scoreCell = document.createElement('td');
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = `${score} – ${influenceLabels[score]}`;
+        scoreCell.appendChild(badge);
+
+        const actionCell = document.createElement('td');
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'remove-btn';
+        removeBtn.type = 'button';
+        removeBtn.textContent = 'Remove';
+        removeBtn.addEventListener('click', () => {
+          archetypes.delete(name.toLowerCase());
+          renderList();
+        });
+        actionCell.appendChild(removeBtn);
+
+        row.appendChild(nameCell);
+        row.appendChild(scoreCell);
+        row.appendChild(actionCell);
+        tbody.appendChild(row);
+      });
+
+      listContainer.appendChild(tableClone);
+      generateBtn.disabled = false;
+    };
+
+    const showFeedback = (message, type = 'error') => {
+      feedbackEl.style.color = type === 'error' ? '#ef4444' : '#22c55e';
+      feedbackEl.textContent = message;
+      if (message) {
+        feedbackEl.focus?.();
+      }
+    };
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const rawName = archetypeNameInput.value.trim();
+      const rawScore = archetypeScoreSelect.value;
+
+      if (!rawName || !rawScore) {
+        showFeedback('Please provide an archetype name and select an influence level.');
+        return;
+      }
+
+      const normalizedKey = rawName.toLowerCase();
+      if (archetypes.has(normalizedKey)) {
+        showFeedback('That archetype is already in your list. You can adjust it by removing and adding again.');
+        return;
+      }
+
+      const sanitizedName = sanitize(rawName);
+      const score = Number(rawScore);
+      archetypes.set(normalizedKey, { name: sanitizedName, score });
+      showFeedback('Archetype added!', 'success');
+
+      form.reset();
+      archetypeNameInput.focus();
+      renderList();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      if (!archetypes.size) return;
+      if (confirm('Clear all archetypes?')) {
+        archetypes.clear();
+        renderList();
+        showFeedback('Archetype list cleared.', 'success');
+      }
+    });
+
+    const fetchSummary = async (query) => {
+      const endpoint = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`;
+      const response = await fetch(endpoint, {
+        headers: {
+          'Accept': 'application/json'
         }
-        @font-face {
-            font-family: 'Amazon Ember';
-            src: url("chrome-extension://cgdjpilhipecahhcilnafpblkieebhea/fonts/AmazonEmber_Bd.ttf");
-            font-weight: bold;
-            font-style: normal;
-        }
-    </style><style>
-.skip-link:focus {
-  position: static !important;
-  width: auto !important;
-  height: auto !important;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 1000;
-}
-:focus {
-  outline: 3px solid #005fcc;
-  outline-offset: 2px;
-}
-</style></head>
-<body class="x x-fonts-league-spartan"><header role="banner"><a class="skip-link" href="#main-content" onfocus="this.style.position='static'; this.style.width='auto'; this.style.height='auto';" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a></header><main id="main-content" role="main"><div class="layout layout-layout layout-layout-layout-13 locale-en-GB lang-en" id="layout-b-32-ea-218-24-bb-4-c-1-a-9244-1-bfc-2-c-4-b-1-f-15"><div class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-4 c1-5 c1-6 c1-7 c1-8 c1-9 c1-a c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Page" id="page-212337"><div class="x-el x-el-div page-inner c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="widget widget-header widget-header-header-9" id="023b0e84-ac5b-4e2e-9b8d-09220a145c59"><div class="x-el x-el-div x-el x-el c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-aid="HEADER_WIDGET" data-ux="Header" id="n-212338" role="main"><div> <div id="freemium-ad-212340"></div><section class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-j c1-k c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g" data-aid="HEADER_SECTION" data-ux="Section"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-o c1-p c1-q c1-b c1-c c1-d c1-r c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-s c1-4 c1-b c1-c c1-d c1-t c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-u c1-4 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div id="header_stickynav-anchor212342"></div><div class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-b c1-c c1-d c1-e c1-f c1-g" data-stickynav-wrapper="true" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-x c1-3 c1-b c1-c c1-d c1-e c1-f c1-g" data-stickynav="true" data-ux="Block" id="header_stickynav212341" style=""><nav class="x-el x-el-nav c1-1 c1-2 c1-y c1-z c1-10 c1-11 c1-12 c1-13 c1-u c1-b c1-c c1-d c1-14 c1-15 c1-16 c1-17 c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-18 c1-19 c1-4 c1-n c1-1a c1-1b c1-1c c1-1d c1-1e c1-b c1-c c1-d c1-1f c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-1g c1-1h c1-q c1-1i c1-1j c1-1k c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1l c1-1m c1-c c1-1n c1-1o c1-1p c1-d c1-e c1-f c1-g" data-aid="HEADER_LOGO_RENDERED" data-ux="Block"><a aria-haspopup="menu" class="x-el x-el-a c1-1q c1-1r c1-1s c1-1t c1-1i c1-1u c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-21 c1-b c1-22 c1-c c1-23 c1-24 c1-25 c1-d c1-e c1-f c1-g" data-page="bd255c95-2d19-4592-aa08-fefac70c8679" data-tccl="ux2.HEADER.header9.Logo.Default.Link.Default.212343.click,click" data-typography="LinkAlpha" data-ux="Link" href="https://asamper.com/" rel="" role="link" title="Asamper Inclusion"><div class="x-el x-el-div c1-1 c1-2 c1-26 c1-y c1-u c1-b c1-c c1-d c1-e c1-f c1-g" data-aid="HEADER_LOGO_OVERHANG_CONTAINER" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-27 c1-28 c1-29 c1-2a c1-1e c1-b c1-c c1-d c1-2b c1-e c1-f c1-g" data-ux="Block"><img alt="Asamper Inclusion" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-2f c1-2g c1-2h c1-13 c1-2i c1-27 c1-28 c1-29 c1-2a c1-2j c1-1e c1-b c1-c c1-2k c1-2l c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r c1-2s c1-2t c1-2u c1-2v c1-2w c1-2x c1-d c1-2y c1-2z c1-30 c1-e c1-f c1-g" data-aid="HEADER_LOGO_IMAGE_RENDERED" data-ux="ImageLogo" src="./Asamper_files/qt=q_95" srcset="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:95, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:400,h:400,cg:true,m/cr=w:400,h:400/qt=q:95 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:600,h:600,cg:true,m/cr=w:600,h:600/qt=q:95 3x"/></div></div></a></div></div><div class="x-el x-el-div c1-1 c1-2 c1-31 c1-28 c1-2a c1-n c1-32 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element" id="bs-1"><a aria-expanded="false" aria-haspopup="menu" aria-label="Hamburger Site Navigation Icon" class="x-el x-el-a c1-1q c1-1r c1-1s c1-1t c1-1i c1-n c1-1v c1-18 c1-q c1-1w c1-1x c1-1y c1-1z c1-33 c1-b c1-c c1-23 c1-34 c1-25 c1-d c1-1f c1-e c1-f c1-g" data-aid="HAMBURGER_MENU_LINK" data-edit-interactive="true" data-tccl="ux2.HEADER.header9.Section.Default.Link.Dropdown.212345.click,click" data-toggle-ignore="true" data-typography="LinkAlpha" data-ux="LinkDropdown" href="https://asamper.com/#" icon="hamburger" id="212344" rel="" role="button" toggleid="n-212338-navId-mobile"><svg class="x-el x-el-svg c1-1 c1-2 c1-35 c1-1l c1-36 c1-37 c1-38 c1-39 c1-3a c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="IconHamburger" fill="currentColor" height="40px" viewbox="0 0 24 24" width="40px"><path d="M19 8H5a1 1 0 1 1 0-2h14a1 1 0 0 1 0 2zm0 5.097H5a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2zm0 5.25H5a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2z" fill-rule="evenodd"></path></svg></a></div></div></div><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-3b c1-q c1-18 c1-19 c1-z c1-10 c1-b c1-c c1-d c1-3c c1-e c1-f c1-g" data-ux="Block" id="navBarId-212347"><div class="x-el x-el-div c1-1 c1-2 c1-28 c1-n c1-18 c1-q c1-3d c1-3e c1-3f c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1l c1-1m c1-1h c1-c c1-3g c1-3h c1-3i c1-3j c1-d c1-e c1-f c1-g" data-aid="HEADER_LOGO_RENDERED" data-ux="Block"><a aria-haspopup="menu" class="x-el x-el-a c1-1q c1-1r c1-1s c1-1t c1-1i c1-1u c1-1v c1-1w c1-1x c1-1y c1-1z c1-20 c1-21 c1-b c1-22 c1-c c1-23 c1-24 c1-25 c1-d c1-e c1-f c1-g" data-page="bd255c95-2d19-4592-aa08-fefac70c8679" data-tccl="ux2.HEADER.header9.Logo.Default.Link.Default.212348.click,click" data-typography="LinkAlpha" data-ux="Link" href="https://asamper.com/" rel="" role="link" title="Asamper Inclusion"><div class="x-el x-el-div c1-1 c1-2 c1-26 c1-y c1-u c1-b c1-c c1-d c1-e c1-f c1-g" data-aid="HEADER_LOGO_OVERHANG_CONTAINER" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-27 c1-28 c1-29 c1-2a c1-1e c1-b c1-c c1-d c1-2b c1-e c1-f c1-g" data-ux="Block"><img alt="Asamper Inclusion" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-2f c1-2g c1-2h c1-13 c1-2i c1-27 c1-28 c1-29 c1-2a c1-2j c1-1e c1-b c1-c c1-2k c1-2l c1-2m c1-2n c1-2o c1-2p c1-2q c1-2r c1-2s c1-2t c1-2u c1-2v c1-2w c1-2x c1-d c1-2y c1-2z c1-30 c1-e c1-f c1-g" data-aid="HEADER_LOGO_IMAGE_RENDERED" data-ux="ImageLogo" id="logo-212346" src="./Asamper_files/qt=q_95" srcset="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:200,h:200,cg:true,m/cr=w:200,h:200/qt=q:95, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:400,h:400,cg:true,m/cr=w:400,h:400/qt=q:95 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/blob-d9b65cb.png/:/rs=w:600,h:600,cg:true,m/cr=w:600,h:600/qt=q:95 3x" style="max-height: 200px; box-shadow: none; margin-top: 0px;"/></div></div></a></div></div><div class="x-el x-el-div c1-1 c1-2 c1-n c1-3k c1-18 c1-3l c1-32 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-y c1-3m c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><nav class="x-el x-el-nav c1-1 c1-2 c1-20 c1-3n c1-b c1-c c1-d c1-e c1-f c1-g" data-aid="HEADER_NAV_RENDERED" data-ux="Nav" role="navigation"><ul class="x-el x-el-ul c1-1 c1-2 c1-1a c1-1c c1-1d c1-1b c1-3o c1-3p c1-3q c1-y c1-27 c1-28 c1-29 c1-2a c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="List" id="nav-212349" style="white-space: nowrap;"><li class="x-el x-el-li nav-item c1-1 c1-2 c1-3r c1-1d c1-3s c1-1l c1-3t c1-36 c1-3u c1-3v c1-y c1-3w c1-b c1-c c1-3x c1-3y c1-d c1-e c1-f c1-g visible" data-ux="ListItemInline" style="visibility: visible;"><a aria-haspopup="menu" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-41 c1-1v c1-b c1-33 c1-42 c1-43 c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="bd255c95-2d19-4592-aa08-fefac70c8679" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Active.212351.click,click" data-typography="NavAlpha" data-ux="NavLinkActive" href="https://asamper.com/" rel="" role="link" target="">Home</a></li><li class="x-el x-el-li nav-item c1-1 c1-2 c1-3r c1-1d c1-3s c1-1l c1-3t c1-36 c1-3u c1-3v c1-y c1-3w c1-b c1-c c1-3x c1-3y c1-d c1-e c1-f c1-g visible" data-ux="ListItemInline" style="visibility: visible;"><a aria-haspopup="false" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-41 c1-1v c1-4a c1-4b c1-4c c1-4d c1-3a c1-38 c1-37 c1-39 c1-b c1-33 c1-42 c1-4e c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="fd2f3a30-11ed-47fc-a8dd-4b4553504b63" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Default.212352.click,click" data-typography="NavAlpha" data-ux="NavLink" href="https://asamper.com/about-us" rel="" role="link" target="">About us</a></li><li class="x-el x-el-li nav-item c1-1 c1-2 c1-3r c1-1d c1-3s c1-1l c1-3t c1-36 c1-3u c1-3v c1-y c1-3w c1-b c1-c c1-3x c1-3y c1-d c1-e c1-f c1-g visible" data-ux="ListItemInline" style="visibility: visible;"><a aria-haspopup="false" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-41 c1-1v c1-4a c1-4b c1-4c c1-4d c1-3a c1-38 c1-37 c1-39 c1-b c1-33 c1-42 c1-4e c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="b4009f25-2015-445e-986e-8539d405a4f7" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Default.212353.click,click" data-typography="NavAlpha" data-ux="NavLink" href="https://asamper.com/services-3" rel="" role="link" target="">Services </a></li><li class="x-el x-el-li nav-item c1-1 c1-2 c1-3r c1-1d c1-3s c1-1l c1-3t c1-36 c1-3u c1-3v c1-y c1-3w c1-b c1-c c1-3x c1-3y c1-d c1-e c1-f c1-g visible" data-ux="ListItemInline" style="visibility: visible;"><a aria-haspopup="false" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-41 c1-1v c1-4a c1-4b c1-4c c1-4d c1-3a c1-38 c1-37 c1-39 c1-b c1-33 c1-42 c1-4e c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="f9f3aef0-07ad-43c3-9865-27fa72d7e3c4" data-tccl="ux2.HEADER.header9.Nav.Default.Link.Default.212354.click,click" data-typography="NavAlpha" data-ux="NavLink" href="https://asamper.com/contact-us" rel="" role="link" target="">Contact Us</a></li><li class="x-el x-el-li nav-item c1-1 c1-2 c1-3r c1-1d c1-3s c1-1l c1-3t c1-36 c1-3u c1-3v c1-y c1-3w c1-b c1-c c1-3x c1-3y c1-d c1-e c1-f c1-g" data-ux="ListItemInline" style="visibility: hidden; display: none;"><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element" id="bs-2"><span class="x-el x-el-span c2-1 c2-2 c2-3 c2-4 c2-5 c2-6 c2-7 c2-8" data-ux="Element"><a aria-expanded="false" aria-haspopup="menu" class="x-el x-el-a c2-9 c2-a c2-b c2-c c2-d c2-e c2-f c2-g c2-3 c2-h c2-i c2-j c2-k c2-l c2-m c2-n c2-o c2-p" data-aid="NAV_MORE" data-edit-interactive="true" data-toggle-ignore="true" data-typography="NavAlpha" data-ux="NavLinkDropdown" href="https://asamper.com/#" id="1" rel="" role="button"><div data-aid="NAV_MORE" style="pointer-events: none; display: flex; align-items: center;"><span style="margin-right: 4px;">More</span><svg class="x-el x-el-svg c2-1 c2-2 c2-q c2-r c2-s c2-t c2-u c2-v c2-f c2-3 c2-i c2-m c2-n c2-o c2-p" data-ux="Icon" fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M19.774 7.86c.294-.335.04-.839-.423-.84L4.538 7c-.447-.001-.698.48-.425.81l7.204 8.693a.56.56 0 0 0 .836.011l7.621-8.654z" fill-rule="evenodd"></path></svg></div></a></span></div><ul class="x-el x-el-ul c1-1 c1-2 c1-4h c1-4i c1-3 c1-4j c1-4k c1-4l c1-4m c1-4n c1-4o c1-4p c1-3v c1-4q c1-4r c1-3b c1-4s c1-b c1-c c1-4t c1-4u c1-d c1-e c1-f c1-g" data-ux="Dropdown" id="more-212350" role="menu"><li class="x-el x-el-li c1-1 c1-2 c1-3r c1-1c c1-41 c1-1h c1-b c1-c c1-4v c1-d c1-e c1-f c1-g" data-ux="ListItem" role="menuitem"><a aria-haspopup="menu" aria-labelledby="more-212350" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-1l c1-1v c1-4w c1-4x c1-4y c1-b c1-33 c1-42 c1-43 c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="bd255c95-2d19-4592-aa08-fefac70c8679" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Active.212357.click,click" data-typography="NavAlpha" data-ux="NavMoreMenuLinkActive" href="https://asamper.com/" rel="" role="link" target="">Home</a></li><li class="x-el x-el-li c1-1 c1-2 c1-3r c1-1c c1-41 c1-1h c1-b c1-c c1-4v c1-d c1-e c1-f c1-g" data-ux="ListItem" role="menuitem"><a aria-haspopup="false" aria-labelledby="more-212350" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-1l c1-1v c1-4w c1-4x c1-4y c1-b c1-33 c1-42 c1-4e c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="fd2f3a30-11ed-47fc-a8dd-4b4553504b63" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Default.212358.click,click" data-typography="NavAlpha" data-ux="NavMoreMenuLink" href="https://asamper.com/about-us" rel="" role="link" target="">About us</a></li><li class="x-el x-el-li c1-1 c1-2 c1-3r c1-1c c1-41 c1-1h c1-b c1-c c1-4v c1-d c1-e c1-f c1-g" data-ux="ListItem" role="menuitem"><a aria-haspopup="false" aria-labelledby="more-212350" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-1l c1-1v c1-4w c1-4x c1-4y c1-b c1-33 c1-42 c1-4e c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="b4009f25-2015-445e-986e-8539d405a4f7" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Default.212359.click,click" data-typography="NavAlpha" data-ux="NavMoreMenuLink" href="https://asamper.com/services-3" rel="" role="link" target="">Services </a></li><li class="x-el x-el-li c1-1 c1-2 c1-3r c1-1c c1-41 c1-1h c1-b c1-c c1-4v c1-d c1-e c1-f c1-g" data-ux="ListItem" role="menuitem"><a aria-haspopup="false" aria-labelledby="more-212350" class="x-el x-el-a c1-3z c1-40 c1-1s c1-1t c1-1i c1-1l c1-1v c1-4w c1-4x c1-4y c1-b c1-33 c1-42 c1-4e c1-44 c1-45 c1-46 c1-47 c1-48 c1-49" data-edit-interactive="true" data-page="f9f3aef0-07ad-43c3-9865-27fa72d7e3c4" data-tccl="ux2.HEADER.header9.Nav.MoreMenu.Link.Default.212360.click,click" data-typography="NavAlpha" data-ux="NavMoreMenuLink" href="https://asamper.com/contact-us" rel="" role="link" target="">Contact Us</a></li></ul></li></ul></nav></div></div></div></div></nav></div></div><div class="x-el x-el-div c1-1 c1-2 c1-4z c1-50 c1-51 c1-4 c1-52 c1-4r c1-53 c1-h c1-54 c1-55 c1-56 c1-57 c1-58 c1-j c1-n c1-o c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="NavigationDrawer" id="n-212338-navId-mobile" role="navigation"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><svg class="x-el x-el-svg c1-1 c1-2 c1-59 c1-1l c1-2e c1-37 c1-38 c1-39 c1-3a c1-1v c1-5a c1-5b c1-4n c1-5c c1-5d c1-5e c1-b c1-5f c1-5g c1-5h c1-5i c1-5j" data-close="true" data-edit-interactive="true" data-ux="CloseIcon" fill="currentColor" height="40px" viewbox="0 0 24 24" width="40px"><path d="M19.245 4.313a1.065 1.065 0 0 0-1.508 0L11.78 10.27 5.82 4.313A1.065 1.065 0 1 0 4.312 5.82l5.958 5.958-5.958 5.959a1.067 1.067 0 0 0 1.508 1.508l5.959-5.958 5.958 5.958a1.065 1.065 0 1 0 1.508-1.508l-5.958-5.959 5.958-5.958a1.065 1.065 0 0 0 0-1.508" fill-rule="evenodd"></path></svg></div><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-4r c1-5k c1-4 c1-5l c1-b c1-c c1-5m c1-d c1-5n c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container" id="n-212338-navContainerId-mobile"><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block" id="n-212338-navLinksContentId-mobile"><ul class="x-el x-el-ul c1-1 c1-2 c1-1a c1-1c c1-1d c1-1b c1-3o c1-3p c1-3q c1-1h c1-27 c1-29 c1-2a c1-28 c1-1t c1-1i c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="NavigationDrawerList" id="n-212338-navListId-mobile" role="menu"><li class="x-el x-el-li c1-1 c1-2 c1-5q c1-1c c1-41 c1-5r c1-5s c1-5t c1-b c1-c c1-4v c1-5u c1-d c1-e c1-f c1-g" data-ux="NavigationDrawerListItem" role="menuitem"><a aria-haspopup="menu" class="x-el x-el-a c1-1 c1-2 c1-1s c1-1t c1-1i c1-n c1-1v c1-4j c1-4k c1-11 c1-12 c1-18 c1-5v c1-5w c1-b c1-59 c1-5x c1-43 c1-5y c1-5z c1-60 c1-61 c1-62 c1-63 c1-64" data-close="true" data-edit-interactive="true" data-page="bd255c95-2d19-4592-aa08-fefac70c8679" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Active.212361.click,click" data-typography="NavBeta" data-ux="NavigationDrawerLinkActive" href="https://asamper.com/" rel="" role="link" target=""><span>Home</span></a></li><li class="x-el x-el-li c1-1 c1-2 c1-5q c1-1c c1-41 c1-5r c1-5s c1-5t c1-b c1-c c1-4v c1-5u c1-d c1-e c1-f c1-g" data-ux="NavigationDrawerListItem" role="menuitem"><a aria-haspopup="false" class="x-el x-el-a c1-1 c1-2 c1-1s c1-1t c1-1i c1-n c1-1v c1-4j c1-4k c1-11 c1-12 c1-18 c1-5v c1-5w c1-b c1-59 c1-5x c1-4e c1-5y c1-5z c1-60 c1-61 c1-62 c1-63 c1-64" data-close="true" data-edit-interactive="true" data-page="fd2f3a30-11ed-47fc-a8dd-4b4553504b63" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Default.212362.click,click" data-typography="NavBeta" data-ux="NavigationDrawerLink" href="https://asamper.com/about-us" rel="" role="link" target=""><span>About us</span></a></li><li class="x-el x-el-li c1-1 c1-2 c1-5q c1-1c c1-41 c1-5r c1-5s c1-5t c1-b c1-c c1-4v c1-5u c1-d c1-e c1-f c1-g" data-ux="NavigationDrawerListItem" role="menuitem"><a aria-haspopup="false" class="x-el x-el-a c1-1 c1-2 c1-1s c1-1t c1-1i c1-n c1-1v c1-4j c1-4k c1-11 c1-12 c1-18 c1-5v c1-5w c1-b c1-59 c1-5x c1-4e c1-5y c1-5z c1-60 c1-61 c1-62 c1-63 c1-64" data-close="true" data-edit-interactive="true" data-page="b4009f25-2015-445e-986e-8539d405a4f7" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Default.212363.click,click" data-typography="NavBeta" data-ux="NavigationDrawerLink" href="https://asamper.com/services-3" rel="" role="link" target=""><span>Services </span></a></li><li class="x-el x-el-li c1-1 c1-2 c1-5q c1-1c c1-41 c1-5r c1-5s c1-5t c1-b c1-c c1-4v c1-5u c1-d c1-e c1-f c1-g" data-ux="NavigationDrawerListItem" role="menuitem"><a aria-haspopup="false" class="x-el x-el-a c1-1 c1-2 c1-1s c1-1t c1-1i c1-n c1-1v c1-4j c1-4k c1-11 c1-12 c1-18 c1-5v c1-5w c1-b c1-59 c1-5x c1-4e c1-5y c1-5z c1-60 c1-61 c1-62 c1-63 c1-64" data-close="true" data-edit-interactive="true" data-page="f9f3aef0-07ad-43c3-9865-27fa72d7e3c4" data-tccl="ux2.HEADER.header9.NavigationDrawer.Default.Link.Default.212364.click,click" data-typography="NavBeta" data-ux="NavigationDrawerLink" href="https://asamper.com/contact-us" rel="" role="link" target=""><span>Contact Us</span></a></li></ul><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-41 c1-d c1-1f c1-e c1-f c1-g" data-ux="Block"></div></div></div></div></div></div><div class="x-el x-el-div c1-1 c1-2 c1-4 c1-65 c1-3b c1-18 c1-o c1-66 c1-1a c1-1c c1-h c1-b c1-c c1-d c1-67 c1-68 c1-69 c1-3c c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-1d c1-1b c1-11 c1-12 c1-20 c1-n c1-b c1-c c1-5m c1-d c1-5n c1-6a c1-6b c1-6c c1-6d c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-y c1-1a c1-1c c1-6e c1-6f c1-4 c1-n c1-66 c1-o c1-6g c1-b c1-c c1-d c1-6h c1-6i c1-6j c1-6k c1-6l c1-6m c1-6n c1-6o c1-e c1-f c1-g" data-ux="Hero"><div class="x-el x-el-div c1-1 c1-2 c1-4x c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-1t c1-1i c1-41 c1-y c1-20 c1-21 c1-6p c1-b c1-c c1-d c1-e c1-f c1-g" defaultfontsize="xxxlarge" id="tagline-container-212365"><h1 aria-level="1" class="x-el x-el-h1 c1-1 c1-2 c1-1t c1-1i c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-6s c1-20 c1-1l c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-6t c1-6u c1-6v c1-6w" containerid="tagline-container-212365" data-aid="HEADER_TAGLINE_RENDERED" data-font-scaled="true" data-typography="HeadingBeta" data-ux="Tagline" id="dynamic-tagline-212366" maxlines="4" role="heading">A S A M P E R</h1><span aria-hidden="true" aria-level="NaN" class="x-el x-el-span c1-1 c1-2 c1-6x c1-6y c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-20 c1-3b c1-3w c1-4n c1-21 c1-6z c1-70 c1-6s c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-6t c1-6u c1-6v c1-6w" data-font-scaled="true" data-scaler-id="scaler-tagline-container-212365" data-size="xxxlarge" data-typography="HeadingBeta" data-ux="scaler" role="heading">A S A M P E R</span><span aria-hidden="true" aria-level="NaN" class="x-el x-el-span c1-1 c1-2 c1-6x c1-6y c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-20 c1-3b c1-3w c1-4n c1-21 c1-6z c1-70 c1-71 c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-72 c1-73 c1-74 c1-75" data-font-scaled="true" data-scaler-id="scaler-tagline-container-212365" data-size="xxlarge" data-typography="HeadingBeta" data-ux="scaler" role="heading">A S A M P E R</span><span aria-hidden="true" aria-level="NaN" class="x-el x-el-span c1-1 c1-2 c1-6x c1-6y c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-20 c1-3b c1-3w c1-4n c1-21 c1-6z c1-70 c1-5e c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-5g c1-5h c1-5i c1-5j" data-font-scaled="true" data-scaler-id="scaler-tagline-container-212365" data-size="xlarge" data-typography="HeadingBeta" data-ux="scaler" role="heading">A S A M P E R</span></div></div><div class="x-el x-el-div c1-1 c1-2 c1-4x c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-20 c1-76 c1-77 c1-78 c1-79 c1-b c1-33 c1-5x c1-4e c1-60 c1-62 c1-63 c1-64 x-rt" data-aid="HEADER_TAGLINE2_RENDERED" data-typography="BodyBeta" data-ux="HeroText"><p style="margin:0"><span><br/></span></p><p style="margin:0"><span>CONSULTING - TRAINING - COACHING </span></p><p style="margin:0"><span><br/></span></p></div></div><div class="x-el x-el-div c1-1 c1-2 c1-7f c1-7g c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-4 c1-n c1-7h c1-7i c1-7j c1-66 c1-b c1-c c1-3i c1-7k c1-7l c1-d c1-6a c1-e c1-f c1-g" data-ux="Block"><div style="max-width:100%"><a class="x-el x-el-a c1-3z c1-40 c1-1v c1-7m c1-7n c1-18 c1-66 c1-6g c1-1s c1-1i c1-1t c1-y c1-20 c1-4 c1-3u c1-7o c1-z c1-10 c1-7p c1-7q c1-7r c1-7s c1-b c1-43 c1-7t c1-42 c1-7u c1-7v c1-46 c1-47 c1-48 c1-49" data-aid="HEADER_CTA_BTN" data-page="c991183c-0183-499a-bcc1-01b9b706924e" data-tccl="ux2.header.cta_button.click,click" data-typography="ButtonAlpha" data-ux="ButtonPrimary" data-ux-btn="primary" href="https://asamper.com/services" target="">Here for you</a></div></div></div></div></div></div><div class="x-el x-el-div c1-1 c1-2 c1-4 c1-65 c1-n c1-18 c1-o c1-66 c1-1a c1-1c c1-h c1-b c1-c c1-d c1-67 c1-68 c1-69 c1-1f c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-1d c1-1b c1-11 c1-12 c1-20 c1-n c1-b c1-c c1-5m c1-d c1-5n c1-6a c1-6b c1-6c c1-6d c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-y c1-1a c1-1c c1-6e c1-6f c1-4 c1-n c1-66 c1-o c1-6g c1-b c1-c c1-d c1-6h c1-6i c1-6j c1-6k c1-6l c1-6m c1-6n c1-6o c1-e c1-f c1-g" data-ux="Hero"><div class="x-el x-el-div c1-1 c1-2 c1-4x c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-1t c1-1i c1-41 c1-y c1-20 c1-21 c1-6p c1-b c1-c c1-d c1-e c1-f c1-g" defaultfontsize="xxxlarge" id="tagline-container-212367"><h1 aria-level="1" class="x-el x-el-h1 c1-1 c1-2 c1-1t c1-1i c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-6s c1-20 c1-1l c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-6t c1-6u c1-6v c1-6w" containerid="tagline-container-212367" data-aid="HEADER_TAGLINE_RENDERED" data-font-scaled="true" data-typography="HeadingBeta" data-ux="Tagline" id="dynamic-tagline-212368" maxlines="4" role="heading">A S A M P E R</h1><span aria-hidden="true" aria-level="NaN" class="x-el x-el-span c1-1 c1-2 c1-6x c1-6y c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-20 c1-3b c1-3w c1-4n c1-21 c1-6z c1-70 c1-6s c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-6t c1-6u c1-6v c1-6w" data-font-scaled="true" data-scaler-id="scaler-tagline-container-212367" data-size="xxxlarge" data-typography="HeadingBeta" data-ux="scaler" role="heading">A S A M P E R</span><span aria-hidden="true" aria-level="NaN" class="x-el x-el-span c1-1 c1-2 c1-6x c1-6y c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-20 c1-3b c1-3w c1-4n c1-21 c1-6z c1-70 c1-71 c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-72 c1-73 c1-74 c1-75" data-font-scaled="true" data-scaler-id="scaler-tagline-container-212367" data-size="xxlarge" data-typography="HeadingBeta" data-ux="scaler" role="heading">A S A M P E R</span><span aria-hidden="true" aria-level="NaN" class="x-el x-el-span c1-1 c1-2 c1-6x c1-6y c1-6q c1-1d c1-1b c1-1a c1-1c c1-6r c1-20 c1-3b c1-3w c1-4n c1-21 c1-6z c1-70 c1-5e c1-1m c1-22 c1-4e c1-2o c1-2p c1-2q c1-2r c1-5g c1-5h c1-5i c1-5j" data-font-scaled="true" data-scaler-id="scaler-tagline-container-212367" data-size="xlarge" data-typography="HeadingBeta" data-ux="scaler" role="heading">A S A M P E R</span></div></div><div class="x-el x-el-div c1-1 c1-2 c1-4x c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-20 c1-76 c1-77 c1-78 c1-79 c1-b c1-33 c1-5x c1-4e c1-60 c1-62 c1-63 c1-64 x-rt" data-aid="HEADER_TAGLINE2_RENDERED" data-typography="BodyBeta" data-ux="HeroText"><p style="margin:0"><span><br/></span></p><p style="margin:0"><span>CONSULTING - TRAINING - COACHING </span></p><p style="margin:0"><span><br/></span></p></div></div><div class="x-el x-el-div c1-1 c1-2 c1-7f c1-7g c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><div class="x-el x-el-div c1-1 c1-2 c1-4 c1-n c1-7h c1-7i c1-7j c1-66 c1-b c1-c c1-3i c1-7k c1-7l c1-d c1-6a c1-e c1-f c1-g" data-ux="Block"><div style="max-width:100%"><a class="x-el x-el-a c1-3z c1-40 c1-1v c1-7m c1-7n c1-18 c1-66 c1-6g c1-1s c1-1i c1-1t c1-y c1-20 c1-4 c1-3u c1-7o c1-z c1-10 c1-7p c1-7q c1-7r c1-7s c1-b c1-43 c1-7t c1-42 c1-7u c1-7v c1-46 c1-47 c1-48 c1-49" data-aid="HEADER_CTA_BTN" data-page="c991183c-0183-499a-bcc1-01b9b706924e" data-tccl="ux2.header.cta_button.click,click" data-typography="ButtonAlpha" data-ux="ButtonPrimary" data-ux-btn="primary" href="https://asamper.com/services" target="">Here for you</a></div></div></div></div></div></div></div></section> </div></div></div><div class="widget widget-content widget-content-content-4" id="b3fbb878-2c68-43bb-ad1c-f4cb748c11f7"><div class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Widget" id="b3fbb878-2c68-43bb-ad1c-f4cb748c11f7" role="region"><div> <section class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g" data-ux="Section"><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-b c1-c c1-5m c1-d c1-5n c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-7w c1-7x c1-7h c1-1a c1-7y c1-1c c1-7z c1-6g c1-b c1-c c1-80 c1-81 c1-82 c1-83 c1-d c1-e c1-f c1-g" data-ux="Grid"><div class="x-el x-el-div c1-1 c1-2 c1-7w c1-65 c1-84 c1-85 c1-20 c1-27 c1-86 c1-29 c1-87 c1-b c1-c c1-88 c1-89 c1-8a c1-8b c1-8c c1-8d c1-8e c1-d c1-8f c1-8g c1-8h c1-e c1-f c1-g" data-ux="GridCell"><div class="x-el x-el-div x-el c1-1 c1-2 c1-n c1-o c1-4 c1-8i c1-18 c1-6g c1-8j c1-8k c1-b c1-c c1-8l c1-8m c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="ContentBasic"><div alignment="center" class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-8n c1-8o c1-8p c1-8q c1-8r c1-8s c1-8t c1-8u c1-8v c1-8w c1-8x c1-8y c1-8z c1-90 c1-91 c1-92 c1-93 c1-94 c1-95 c1-96 c1-97 c1-98 c1-99 c1-9a c1-9b c1-9c c1-9d c1-9e c1-65 c1-b c1-3r c1-9f c1-4e c1-9g c1-9h c1-9i c1-9j x-rt" data-aid="CONTENT_WELCOME_DESCRIPTION_RENDERED" data-font-scaled="true" data-typography="BodyAlpha" data-ux="FeaturedText" fontscalemultiplier="1.12"><p style="margin:0"><span>"We are at the forefront of a paradigm shift, revolutionizing how people and organisations think about interpersonal relations to foster true inclusion and belonging"</span></p><p style="margin:0"><span><br/></span></p><p style="margin:0"><span> Our human-centric model places people and relationships at the heart of every initiative</span></p><p style="margin:0"><span><br/></span></p></div><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><a class="x-el x-el-a c1-3z c1-40 c1-1v c1-7m c1-7n c1-18 c1-66 c1-6g c1-1s c1-1i c1-1t c1-y c1-20 c1-4 c1-3u c1-7o c1-z c1-10 c1-7p c1-7q c1-7r c1-7s c1-b c1-43 c1-7t c1-42 c1-7u c1-7v c1-46 c1-47 c1-48 c1-49" data-aid="CONTENT_CTA_BTN_RENDERED" data-page="bd255c95-2d19-4592-aa08-fefac70c8679" data-tccl="ux2.CONTENT.content4.Featured.Default.Button.Secondary.212369.click,click" data-typography="ButtonAlpha" data-ux="ButtonSecondary" data-ux-btn="secondary" href="https://asamper.com/" target="">Get in Touch</a></div></div></div></div></div></section> </div></div></div><div class="widget widget-about widget-about-about-2" id="a7c900e8-5d8f-491d-ab4f-08252f1bb880"><div class="x-el x-el-div x-el c1-1 c1-2 c1-9k c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Widget" id="a7c900e8-5d8f-491d-ab4f-08252f1bb880" role="region"><div> <section class="x-el x-el-section c1-1 c1-2 c1-9k c1-h c1-i c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g" data-ux="Section"><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-b c1-c c1-5m c1-d c1-5n c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><h2 aria-level="2" class="x-el x-el-h2 c1-1 c1-2 c1-1t c1-1i c1-9l c1-2c c1-1b c1-1a c1-9m c1-6g c1-1m c1-71 c1-22 c1-4e c1-72 c1-6m c1-6b c1-73 c1-74 c1-75" data-aid="ABOUT_SECTION_TITLE_RENDERED" data-typography="HeadingBeta" data-ux="SectionHeading" role="heading"><span class="x-el x-el-span c1-9n c1-35 c1-9o c1-9p c1-9q" data-ux="Element">WHAT WE DO</span><div class="x-el x-el-div c1-4 c1-9r c1-1m c1-71 c1-72 c1-73 c1-74 c1-75" data-ux="Block"><hr aria-hidden="true" class="x-el x-el-hr c1-9s c1-9t c1-9u c1-7f c1-1c c1-9v c1-1l c1-1m c1-71 c1-72 c1-73 c1-74 c1-75" data-ux="SectionHeadingHR" role="separator"/></div></h2><div class="x-el x-el-div c1-1 c1-2 c1-n c1-7w c1-7x c1-7h c1-1a c1-7y c1-9w c1-7z c1-b c1-c c1-80 c1-81 c1-9x c1-83 c1-d c1-e c1-f c1-g" data-ux="Grid"><div class="x-el x-el-div c1-1 c1-2 c1-7w c1-65 c1-84 c1-9y c1-20 c1-27 c1-86 c1-9z c1-87 c1-b c1-c c1-8b c1-8c c1-a0 c1-8e c1-d c1-e c1-f c1-g" data-ux="GridCell"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-7w c1-7x c1-7h c1-1a c1-7y c1-1c c1-7z c1-66 c1-b c1-c c1-80 c1-81 c1-82 c1-83 c1-d c1-e c1-f c1-g" data-ux="Grid"><div class="x-el x-el-div c1-1 c1-2 c1-7w c1-65 c1-84 c1-9y c1-20 c1-27 c1-86 c1-29 c1-87 c1-n c1-66 c1-18 c1-b c1-c c1-8b c1-8c c1-8d c1-8e c1-d c1-a1 c1-a2 c1-e c1-f c1-g" data-ux="GridCell"><div class="x-el x-el-div x-el c1-1 c1-2 c1-n c1-o c1-4 c1-8i c1-18 c1-6g c1-8j c1-8k c1-b c1-c c1-a3 c1-8m c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="ContentBasic" id="f52c6c4a-a081-4444-b54f-344523ffa1eb" index="0"><div alignment="center" class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-8n c1-8o c1-8p c1-8q c1-8r c1-8s c1-8t c1-8u c1-8v c1-8w c1-8x c1-8y c1-8z c1-90 c1-91 c1-92 c1-93 c1-94 c1-95 c1-96 c1-97 c1-98 c1-99 c1-9a c1-9b c1-9c c1-9d c1-9e c1-65 c1-b c1-a4 c1-a5 c1-4e c1-a6 c1-a7 c1-a8 c1-a9 x-rt" data-aid="ABOUT_DESCRIPTION_RENDERED0" data-font-scaled="true" data-typography="BodyAlpha" data-ux="ContentText" fontscalemultiplier="1.26"><p style="margin:0"><span>We transform how individuals and teams relate to each other by radically changing the course of the conversation </span></p><p style="margin:0"><span><br/></span></p></div></div></div></div></div><div class="x-el x-el-div c1-1 c1-2 c1-7w c1-65 c1-84 c1-9y c1-20 c1-27 c1-86 c1-9z c1-87 c1-b c1-c c1-8b c1-8c c1-a0 c1-8e c1-d c1-e c1-f c1-g" data-ux="GridCell"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-7w c1-7x c1-7h c1-1a c1-7y c1-1c c1-7z c1-66 c1-b c1-c c1-80 c1-81 c1-82 c1-83 c1-d c1-e c1-f c1-g" data-ux="Grid"><div class="x-el x-el-div c1-1 c1-2 c1-7w c1-65 c1-84 c1-9y c1-20 c1-27 c1-86 c1-29 c1-87 c1-n c1-66 c1-18 c1-b c1-c c1-8b c1-8c c1-8d c1-8e c1-d c1-a1 c1-a2 c1-e c1-f c1-g" data-ux="GridCell"><div class="x-el x-el-div x-el c1-1 c1-2 c1-n c1-o c1-4 c1-8i c1-18 c1-6g c1-8j c1-8k c1-b c1-c c1-a3 c1-8m c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="ContentBasic" id="9ddc3869-178e-4c7a-9741-fd94dcad4d8e" index="1"><h4 aria-level="4" class="x-el x-el-h4 c1-1 c1-2 c1-1t c1-1i c1-6q c1-1d c1-1b c1-1a c1-1c c1-b c1-22 c1-5e c1-4e c1-5g c1-5h c1-5i c1-5j" data-aid="ABOUT_HEADLINE_RENDERED1" data-font-scaled="true" data-typography="HeadingGamma" data-ux="ContentHeading" role="heading">WHY CHOOSE ASAMPER</h4><div alignment="center" class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-8n c1-8o c1-8p c1-8q c1-8r c1-8s c1-8t c1-8u c1-8v c1-8w c1-8x c1-8y c1-8z c1-90 c1-91 c1-92 c1-93 c1-94 c1-95 c1-96 c1-97 c1-98 c1-99 c1-9a c1-9b c1-9c c1-9d c1-9e c1-65 c1-b c1-a4 c1-a5 c1-4e c1-a6 c1-a7 c1-a8 c1-a9 x-rt" data-aid="ABOUT_DESCRIPTION_RENDERED1" data-font-scaled="true" data-typography="BodyAlpha" data-ux="ContentText" fontscalemultiplier="1.26"><p style="margin:0"></p><ul>
-<li><strong class="x-el x-el-span c1-1q c1-1r c1-b c1-7a c1-35 c1-43 c1-7b">Innovative Expertise</strong>: Our groundbreaking methods set us apart, offering a fresh perspective on organisational culture.</li>
-</ul><p></p><p style="margin:0"><span><br/></span></p><p style="margin:0"></p><ul>
-<li><strong class="x-el x-el-span c1-1q c1-1r c1-b c1-7a c1-35 c1-43 c1-7b">Tailored Solutions</strong>: We don't believe in one-size-fits-all; our services are customized to meet your specific needs.</li>
-<li><strong class="x-el x-el-span c1-1q c1-1r c1-b c1-7a c1-35 c1-43 c1-7b">Global Impact</strong>: Our work transcends geographical boundaries, making us a versatile partner in your journey toward a more councious workplace eviroment and more meningful relationhips with your clients.</li>
-</ul><p></p></div></div></div></div></div></div></div></section> </div></div></div><div class="widget widget-logos widget-logos-logos-2" id="745fbd99-7cd0-4fef-a844-7654db5f8ad9"><div class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Widget" id="745fbd99-7cd0-4fef-a844-7654db5f8ad9" role="region"><div> <section class="x-el x-el-section c1-1 c1-2 c1-3 c1-h c1-i c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g" data-ux="Section"><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-b c1-c c1-5m c1-d c1-5n c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Group"><h3 aria-level="3" class="x-el x-el-h3 c1-1 c1-2 c1-1t c1-1i c1-6q c1-1d c1-1b c1-1a c1-9m c1-6g c1-b c1-22 c1-5e c1-4e c1-5g c1-5h c1-5i c1-5j" data-aid="LOGOS_SECTION_TITLE_RENDERED" data-typography="HeadingGamma" data-ux="HeadingMiddle" role="heading">Trusted by</h3><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element" id="bs-3"><div><div style="position:absolute;visibility:hidden;display:flex"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="University of Hertfordshire" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ad c1-2g c1-ae c1-2j c1-b c1-c c1-af c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE0_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:177,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:353,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:512,h:290,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="UCL" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ai c1-2g c1-ae c1-2j c1-b c1-c c1-aj c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE1_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:191,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:300,h:157,cg:true 2x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="College of Policing" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ak c1-2g c1-ae c1-2j c1-b c1-c c1-al c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE2_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:296,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:591,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:887,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="Leonard Cheshire" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-am c1-2g c1-ae c1-2j c1-b c1-c c1-an c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE3_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:273,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:300,h:110,cg:true 2x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="Rolls Royce" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ao c1-2g c1-ae c1-2j c1-b c1-c c1-ap c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE4_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:61,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:123,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:176,h:287,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="Unilever" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-aq c1-2g c1-ae c1-2j c1-b c1-c c1-ar c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE5_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:90,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:181,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:271,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="ATscale, Global Partnership for Assitive Technology" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-as c1-2g c1-ae c1-2j c1-b c1-c c1-at c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE6_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:242,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:485,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:727,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><img alt="LAS, Learning Age Technologies" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-au c1-2g c1-ae c1-2j c1-b c1-c c1-av c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_INVISIBLE7_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:104,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:208,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:312,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/></div></div><div class="x-el x-el-div c1-1 c1-2 c1-y c1-3w c1-b c1-c c1-aw c1-d c1-ax c1-e c1-f c1-g" data-ux="Block"><div class="carousel loaded" style="width:100%;height:auto"><div class="carousel-container-inner" style="width:100%;height:auto;margin-bottom:0"><div class="carousel-viewport" style="margin:0 auto;height:auto"><ul class="carousel-track" style="transform:translateX(NaNpx);transition:none"><li class="carousel-slide" data-index="-2" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="ATscale, Global Partnership for Assitive Technology" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-as c1-2g c1-ae c1-2j c1-b c1-c c1-at c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE6_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:242,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:485,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:727,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="-1" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="LAS, Learning Age Technologies" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-au c1-2g c1-ae c1-2j c1-b c1-c c1-av c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE7_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:104,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:208,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:312,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="0" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="University of Hertfordshire" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ad c1-2g c1-ae c1-2j c1-b c1-c c1-af c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE0_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:177,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:353,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:512,h:290,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="1" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="UCL" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ai c1-2g c1-ae c1-2j c1-b c1-c c1-aj c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE1_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:191,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:300,h:157,cg:true 2x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="2" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="College of Policing" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ak c1-2g c1-ae c1-2j c1-b c1-c c1-al c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE2_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:296,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:591,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/College_of_Policing_logo.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:887,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:295.5665024630542,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="3" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="Leonard Cheshire" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-am c1-2g c1-ae c1-2j c1-b c1-c c1-an c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE3_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:273,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:300,h:110,cg:true 2x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:272.7272727272727,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide carousel-slide-selected" data-index="4" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="Rolls Royce" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ao c1-2g c1-ae c1-2j c1-b c1-c c1-ap c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE4_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:61,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:123,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/RR.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:176,h:287,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:61.32404181184668,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="5" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="Unilever" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-aq c1-2g c1-ae c1-2j c1-b c1-c c1-ar c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE5_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:90,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:181,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/Unilever.svg.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:271,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:90.36144578313254,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="6" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="ATscale, Global Partnership for Assitive Technology" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-as c1-2g c1-ae c1-2j c1-b c1-c c1-at c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE6_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:242,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:485,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/ATSCALE.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:727,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:242.43176178660048,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="7" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="LAS, Learning Age Technologies" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-au c1-2g c1-ae c1-2j c1-b c1-c c1-av c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE7_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:104,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:208,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/LAS.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:312,h:300,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:104.00843881856541,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="8" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="University of Hertfordshire" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ad c1-2g c1-ae c1-2j c1-b c1-c c1-af c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE0_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:177,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:353,h:200,cg:true 2x, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/main-logo-dark-grid.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:512,h:290,cg:true 3x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:176.55172413793105,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li><li class="carousel-slide" data-index="9" style="margin-left:0px;opacity:1"><div class="x-el x-el-div c1-1 c1-2 c1-11 c1-12 c1-b c1-c c1-aa c1-ab c1-ac c1-d c1-e c1-f c1-g" data-ux="Block"><span class="x-el x-el-span c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Element"> <img alt="UCL" class="x-el x-el-img c1-1 c1-2 c1-4 c1-20 c1-2c c1-2d c1-1a c1-1c c1-2e c1-ai c1-2g c1-ae c1-2j c1-b c1-c c1-aj c1-2l c1-2m c1-ag c1-2o c1-2p c1-2q c1-2r c1-2s c1-ah c1-2u c1-2v c1-2w c1-2x c1-d c1-e c1-f c1-g" data-aid="LOGOS_IMAGE1_RENDERED" data-lazyimg="true" data-srclazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true" data-srcsetlazy="//img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:191,h:100,cg:true, //img1.wsimg.com/isteam/ip/b32ea218-24bb-4c1a-9244-1bfc2c4b1f15/UCL.webp/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:300,h:157,cg:true 2x" data-ux="ImageLogo" sizes="(min-width: 451px) and (max-width: 767px) 767px, (min-width: 768px) and (max-width: 1023px) 1023px, (min-width: 1024px) and (max-width: 1279px) 1279px, (min-width: 1280px) and (max-width: 1535px) 1535px, (min-width: 1536px) 1536px" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" srcset="//img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 451w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 768w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1024w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1280w, //img1.wsimg.com/isteam/ip/static/transparent_placeholder.png/:/rs=w:191.0828025477707,h:100,cg:true,m,i:true/qt=q:1/ll=n:true 1536w"/> </span></div></li></ul></div><svg class="x-el x-el-svg c1-1 c1-2 c1-33 c1-1l c1-2e c1-ay c1-az c1-1v c1-4n c1-b0 c1-70 c1-b c1-c c1-b1 c1-b2 c1-d c1-e c1-f c1-g" data-edit-interactive="true" data-ux="Icon" fill="currentColor" height="28" viewbox="0 0 24 24" width="28"><path d="M15.836 19.774c.335.294.84.04.84-.423l.02-14.813c.001-.447-.48-.698-.81-.425l-8.693 7.204a.56.56 0 0 0-.01.836l8.653 7.621z" fill-rule="evenodd"></path></svg><svg class="x-el x-el-svg c1-1 c1-2 c1-33 c1-1l c1-2e c1-ay c1-az c1-1v c1-4n c1-b0 c1-b3 c1-b c1-c c1-b1 c1-b2 c1-d c1-e c1-f c1-g" data-edit-interactive="true" data-ux="Icon" fill="currentColor" height="28" viewbox="0 0 24 24" width="28"><path d="M7.861 4.125c-.335-.293-.84-.039-.84.424L7 19.362c0 .446.481.697.811.424l8.693-7.203a.56.56 0 0 0 .011-.836L7.861 4.125z" fill-rule="evenodd"></path></svg></div></div></div></div></div></div></div></section> </div></div></div><div class="widget widget-content widget-content-content-4" id="c86dc543-6ac4-402a-8e8f-17decf29a487"><div class="x-el x-el-div x-el c1-1 c1-2 c1-9k c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Widget" id="c86dc543-6ac4-402a-8e8f-17decf29a487" role="region"><div> <section class="x-el x-el-section c1-1 c1-2 c1-9k c1-h c1-i c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g" data-ux="Section"><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-b c1-c c1-5m c1-d c1-5n c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-n c1-7w c1-7x c1-7h c1-1a c1-7y c1-1c c1-7z c1-6g c1-b c1-c c1-80 c1-81 c1-82 c1-83 c1-d c1-e c1-f c1-g" data-ux="Grid"><div class="x-el x-el-div c1-1 c1-2 c1-7w c1-65 c1-84 c1-85 c1-20 c1-27 c1-86 c1-29 c1-87 c1-b c1-c c1-88 c1-89 c1-8a c1-8b c1-8c c1-8d c1-8e c1-d c1-8f c1-8g c1-8h c1-e c1-f c1-g" data-ux="GridCell"><div class="x-el x-el-div x-el c1-1 c1-2 c1-n c1-o c1-4 c1-8i c1-18 c1-6g c1-8j c1-8k c1-b c1-c c1-8l c1-8m c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="ContentBasic"><h4 aria-level="4" class="x-el x-el-h4 c1-1 c1-2 c1-1t c1-1i c1-6q c1-1d c1-1b c1-1a c1-1c c1-b c1-b4 c1-5x c1-4e c1-60 c1-62 c1-63 c1-64" data-aid="CONTENT_WELCOME_TITLE_RENDERED" data-typography="HeadingDelta" data-ux="FeaturedHeading" role="heading">Ready to transform your work culture? Let's redefine what's possible together.</h4><div class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><a class="x-el x-el-a c1-3z c1-40 c1-1v c1-7m c1-7n c1-18 c1-66 c1-6g c1-1s c1-1i c1-1t c1-y c1-20 c1-4 c1-3u c1-7o c1-z c1-10 c1-7p c1-7q c1-7r c1-7s c1-b c1-43 c1-7t c1-42 c1-7u c1-7v c1-46 c1-47 c1-48 c1-49" data-aid="CONTENT_CTA_BTN_RENDERED" data-page="f9f3aef0-07ad-43c3-9865-27fa72d7e3c4" data-tccl="ux2.CONTENT.content4.Featured.Default.Button.Secondary.212370.click,click" data-typography="ButtonAlpha" data-ux="ButtonSecondary" data-ux-btn="secondary" href="https://asamper.com/contact-us" target="">Talk to us</a></div></div></div></div></div></section> </div></div></div><div class="widget widget-footer widget-footer-footer-1" id="c22fb8a4-f4f3-44e9-a0ae-bd4a801c2062"><div class="x-el x-el-div x-el c1-1 c1-2 c1-4z c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Widget" id="c22fb8a4-f4f3-44e9-a0ae-bd4a801c2062" role="contentinfo"><div> <section class="x-el x-el-section c1-1 c1-2 c1-4z c1-h c1-i c1-b c1-c c1-l c1-m c1-d c1-e c1-f c1-g" data-ux="Section"><div class="x-el x-el-div c1-1 c1-2 c1-2c c1-2d c1-11 c1-12 c1-20 c1-b c1-c c1-5m c1-d c1-5n c1-e c1-5o c1-f c1-5p c1-g" data-ux="Container"><div class="x-el x-el-div c1-1 c1-2 c1-6g c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Layout"><div class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-7g c1-b c1-b5 c1-42 c1-4e c1-46 c1-47 c1-48 c1-49 x-rt" data-aid="FOOTER_COPYRIGHT_RENDERED" data-typography="DetailsAlpha" data-ux="FooterDetails"><p style="margin:0"><span>Copyright © 2024 Asamper Ltd - All Rights Reserved.</span></p></div><hr aria-hidden="true" class="x-el x-el-hr c1-1 c1-2 c1-b6 c1-b7 c1-9u c1-1a c1-7g c1-9v c1-2c c1-2d c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="HR" role="separator"/><p class="x-el x-el-p c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-b c1-b5 c1-42 c1-4e c1-46 c1-47 c1-48 c1-49" data-aid="FOOTER_POWERED_BY_RENDERED" data-typography="DetailsAlpha" data-ux="FooterDetails"><span>Powered by <a aria-haspopup="true" class="x-el x-el-a c1-1q c1-1r c1-1s c1-1t c1-1i c1-1u c1-1v c1-b c1-b8 c1-42 c1-23 c1-5y c1-b9 c1-46 c1-47 c1-48 c1-49" data-aid="FOOTER_POWERED_BY_RENDERED_LINK" data-tccl="ux2.FOOTER.footer1.Layout.Default.Link.Default.212371.click,click" data-typography="LinkAlpha" data-ux="Link" href="https://www.godaddy.com/websites/website-builder?isc=pwugc&amp;utm_source=wsb&amp;utm_medium=applications&amp;utm_campaign=en-gb_corp_applications_base" rel="nofollow noopener" role="link" target="_blank">GoDaddy</a></span></p></div></div></section> </div></div></div><div class="widget widget-popup widget-popup-popup-1" id="39b81e75-fa7d-470b-8ce4-99abe1d42253"></div><div class="widget widget-messaging widget-messaging-messaging-1" id="8fd3d689-9442-4a81-820d-cb33298bb9cc"></div><div class="widget widget-cookie-banner widget-cookie-banner-cookie-1" id="ae005b76-2cc3-4b15-8cbf-cf213e2904fd"><div class="x-el x-el-div c1-1 c1-2 c1-50 c1-b3 c1-ba c1-4 c1-bb c1-1h c1-7s c1-2j c1-4r c1-bc c1-bd c1-be c1-bf c1-6e c1-12 c1-6f c1-11 c1-1a c1-1b c1-1c c1-1d c1-1e c1-b c1-c c1-bg c1-bh c1-bi c1-bj c1-bk c1-bl c1-bm c1-d c1-e c1-f c1-g" data-aid="FOOTER_COOKIE_BANNER_RENDERED" data-ux="Group" id="ae005b76-2cc3-4b15-8cbf-cf213e2904fd-banner" style="transform: translateY(-500px); display: none;"><h4 aria-level="4" class="x-el x-el-h4 c1-1 c1-2 c1-1t c1-1i c1-6q c1-1d c1-1b c1-1a c1-1c c1-10 c1-b c1-7r c1-5x c1-4e c1-60 c1-62 c1-63 c1-64" data-aid="FOOTER_COOKIE_TITLE_RENDERED" data-typography="HeadingDelta" data-ux="Heading" role="heading">This website uses cookies.</h4><div class="x-el c1-1 c1-2 c1-1t c1-1i c1-4y c1-1a c1-1c c1-bn c1-4r c1-b c1-bo c1-c c1-4e c1-bp c1-d c1-e c1-f c1-g x-rt" data-aid="FOOTER_COOKIE_MESSAGE_RENDERED" data-typography="BodyAlpha" data-ux="Text"><p style="margin:0"><span>We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.</span></p></div><div class="x-el x-el-div c1-1 c1-2 c1-n c1-5w c1-b c1-c c1-d c1-e c1-f c1-g" data-ux="Block"><a class="x-el x-el-a c1-3z c1-40 c1-n c1-o c1-66 c1-1v c1-7f c1-bq c1-br c1-bs c1-65 c1-7m c1-18 c1-6g c1-1s c1-1i c1-1t c1-y c1-20 c1-4 c1-4l c1-4m c1-bt c1-bu c1-bv c1-7q c1-bw c1-3 c1-b c1-43 c1-7t c1-bx c1-by c1-bz c1-7v c1-c0 c1-c1 c1-c2 c1-c3" data-aid="FOOTER_COOKIE_DECLINE_RENDERED" data-tccl="ux2.COOKIE_BANNER.cookie1.Group.Default.Button.Primary.212373.click,click" data-typography="ButtonAlpha" data-ux="ButtonPrimary" data-ux-btn="primary" href="https://asamper.com/" id="ae005b76-2cc3-4b15-8cbf-cf213e2904fd-decline">Decline</a><a class="x-el x-el-a c1-3z c1-40 c1-n c1-o c1-66 c1-1v c1-7f c1-bq c1-br c1-bs c1-65 c1-7m c1-18 c1-6g c1-1s c1-1i c1-1t c1-y c1-20 c1-4 c1-4l c1-4m c1-bt c1-bu c1-bv c1-7q c1-bw c1-3 c1-b c1-43 c1-7t c1-bx c1-by c1-bz c1-7v c1-c0 c1-c1 c1-c2 c1-c3" data-aid="FOOTER_COOKIE_CLOSE_RENDERED" data-tccl="ux2.COOKIE_BANNER.cookie1.Group.Default.Button.Primary.212374.click,click" data-typography="ButtonAlpha" data-ux="ButtonPrimary" data-ux-btn="primary" href="https://asamper.com/" id="ae005b76-2cc3-4b15-8cbf-cf213e2904fd-accept">Accept</a></div></div></div></div></div></div>
-<script type="text/javascript">"IntersectionObserver"in window&&"Intl"in window&&"Locale"in window.Intl||document.write(`\x3Cscript src="https://img1.wsimg.com/poly/v3/polyfill.min.js?rum=0&unknown=polyfill&flags=gated&features=Intl.~locale.en-GB">\x3C/script>`)</script>
-<script crossorigin="" src="./Asamper_files/script.js"></script>
-<script crossorigin="" src="./Asamper_files/UX.4.37.7.js"></script>
-<script crossorigin="" src="./Asamper_files/script(1).js"></script>
-<script async="" crossorigin="" src="./Asamper_files/js"></script>
-<script>"use strict";
+      });
 
+      if (!response.ok) {
+        throw new Error('No summary available');
+      }
 
-window['ga-disable-G-FT41Q95D1W'] = true;
-window.dataLayer = window.dataLayer || [];
-window._gaID = 'G-FT41Q95D1W';
+      const data = await response.json();
+      if (data.type === 'disambiguation') {
+        throw new Error('Ambiguous term');
+      }
+      return {
+        title: data.title || query,
+        extract: data.extract || 'No description found.',
+        url: data.content_urls?.desktop?.page || data.extract_html || null,
+      };
+    };
 
-window.gtag = window.gtag || function () {
-  window.dataLayer.push(arguments);
-};
+    const buildNarrative = (entries) => {
+      const sorted = [...entries].sort((a, b) => b.score - a.score);
+      const top = sorted[0];
 
-gtag('js', new Date());
+      const intro = `Your dominant guide appears to be the ${top.name}, supported by ${sorted.slice(1).map(e => `the ${e.name}`).join(', ') || 'a singular focus on this archetype'}.`;
+      const middle = sorted.length > 1
+        ? 'Together, these archetypes weave a layered portrait of your motivations, instincts, and aspirations.'
+        : 'This singular focus highlights a clear, resonant energetic signature guiding your path.';
 
+      const closing = 'The insights below prioritise the archetypes you rated most influential, bringing forward language you can reflect on and adapt to your own journey.';
 
-gtag('set', 'developer_id.dZTZmYj', true);
-gtag('config', 'G-FT41Q95D1W');
-Core.utils.onAllowCookieTracking(() => { window[`ga-disable-${window._gaID}`] = false; window.gtag('config', window._gaID); });
-var t=document.createElement("script");t.type="text/javascript",t.addEventListener("load",()=>{window.tti.calculateTTI(({name:t,value:e}={})=>{let i={"wam_site_hasPopupWidget":false,"wam_site_hasMessagingWidget":false,"wam_site_headerTreatment":"Fill","wam_site_hasSlideshow":false,"wam_site_hasFreemiumBanner":false,"wam_site_homepageFirstWidgetType":"CONTENT","wam_site_homepageFirstWidgetPreset":"content4","wam_site_businessCategory":"consultantsgeneralservices","wam_site_theme":"layout13","wam_site_locale":"en-GB","wam_site_fontPack":"league-spartan","wam_site_cookieBannerEnabled":true,"wam_site_membershipEnabled":true,"wam_site_hasHomepageHTML":false,"wam_site_hasHomepageShop":false,"wam_site_hasHomepageOla":false,"wam_site_hasHomepageBlog":false,"wam_site_hasShop":false,"wam_site_hasOla":false,"wam_site_planType":"managedBusiness","wam_site_isHomepage":true,"wam_site_htmlWidget":false};window.networkInfo&&window.networkInfo.downlink&&(i=Object.assign({},i,{["wam_site_networkSpeed"]:window.networkInfo.downlink.toFixed(2)})),window.tti.setCustomProperties(i),window.tti._collectVitals({name:t,value:e})})}),t.setAttribute("src","//img1.wsimg.com/traffic-assets/js/tccl-tti.min.js"),document.body.appendChild(t);</script><script src="./Asamper_files/tccl-tti.min.js" type="text/javascript"></script>
-<script crossorigin="" defer="" src="./Asamper_files/tccl.min.js"></script><style data-glamor="cxs-media-sheet" type="text/css"></style><avios-reminder-popup is-earning="false" retailers="undefined"></avios-reminder-popup></main></body></html>
+      return `${intro} ${middle} ${closing}`;
+    };
+
+    const buildSummaryList = (entries) => {
+      const container = document.createElement('div');
+
+      entries
+        .sort((a, b) => b.score - a.score)
+        .forEach((entry, index) => {
+          const section = document.createElement('section');
+          const heading = document.createElement('h3');
+          heading.textContent = `${index + 1}. ${entry.name} (influence ${entry.score}/5)`;
+
+          const paragraph = document.createElement('p');
+          paragraph.textContent = entry.summary.extract;
+
+          section.appendChild(heading);
+          section.appendChild(paragraph);
+          container.appendChild(section);
+        });
+
+      return container;
+    };
+
+    const buildSourceList = (entries) => {
+      const fragment = document.createDocumentFragment();
+      const heading = document.createElement('h3');
+      heading.textContent = 'Sources';
+      fragment.appendChild(heading);
+
+      const list = document.createElement('ul');
+      entries.forEach((entry) => {
+        if (!entry.summary.url) return;
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = entry.summary.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = entry.summary.title;
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+
+      if (!list.children.length) {
+        const fallback = document.createElement('p');
+        fallback.className = 'source';
+        fallback.textContent = 'No external sources were available for the selected archetypes.';
+        fragment.appendChild(fallback);
+        return fragment;
+      }
+
+      fragment.appendChild(list);
+      return fragment;
+    };
+
+    const setBusyState = (isBusy) => {
+      generateBtn.disabled = isBusy || !archetypes.size;
+      reportSection.setAttribute('aria-busy', String(isBusy));
+      listContainer.setAttribute('aria-busy', String(isBusy));
+      if (isBusy) {
+        const loader = document.createElement('div');
+        loader.className = 'loading';
+        loader.innerHTML = '<span class="spinner" role="status" aria-label="Loading"></span> Gathering archetype insights...';
+        reportSummary.replaceChildren(loader);
+        reportSources.textContent = '';
+        reportIntro.textContent = '';
+        reportSection.hidden = false;
+      }
+    };
+
+    generateBtn.addEventListener('click', async () => {
+      const entries = Array.from(archetypes.values());
+      setBusyState(true);
+
+      try {
+        const enriched = await Promise.all(entries.map(async (entry) => {
+          try {
+            const summary = await fetchSummary(entry.name);
+            return { ...entry, summary };
+          } catch (error) {
+            return {
+              ...entry,
+              summary: {
+                title: entry.name,
+                extract: 'No live description could be retrieved. Reflect on what this archetype means to you personally and add notes below.',
+                url: null,
+              },
+            };
+          }
+        }));
+
+        reportIntro.textContent = buildNarrative(enriched);
+        reportSummary.replaceChildren(buildSummaryList(enriched));
+        reportSources.replaceChildren(buildSourceList(enriched));
+        reportSection.hidden = false;
+        setBusyState(false);
+        showFeedback('Report generated successfully!', 'success');
+      } catch (error) {
+        console.error(error);
+        showFeedback('We could not generate the report right now. Please try again.', 'error');
+        reportSection.hidden = true;
+        setBusyState(false);
+      }
+    });
+
+    renderList();
+  </script>
+</body>
+</html>
